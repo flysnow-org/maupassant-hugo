@@ -1,78 +1,62 @@
-{{ partial "head" . }}
+{{ define "content"}}
+<div class="res-cons">
+    <h3 class="archive-title">
+        搜索
+        <span class="keyword">哈哈</span>
+        的结果
+    </h3>
 
-<body>
-{{ partial "header" . }}
-
-<div id="body">
-    <div class="container">
-        <div class="col-group">
-
-            <div class="col-8" id="main">
-                <div class="res-cons">
-                    <h3 class="archive-title">
-                        搜索
-                        <span class="keyword">哈哈</span>
-                        的结果
-                    </h3>
-
-                    <article class="post">
-                        <header>
-                            <h1 class="post-title">
-                                <a href="链接">标题</a>
-                            </h1>
-                        </header>
-                        <date class="post-meta meta-date">
-                            2019年12月01日
-                        </date>
-                        <div class="post-content">
-                            概要……
-                            <p class="readmore"><a href="链接">阅读全文</a></p>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-
-            {{ partial "sidebar" . }}
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="链接">标题</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月01日
+        </date>
+        <div class="post-content">
+            概要……
+            <p class="readmore"><a href="链接">阅读全文</a></p>
         </div>
-    </div>
+    </article>
+
 </div>
-{{ partial "footer" . }}
 
 <script type="text/javascript">
 
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
 
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
 
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
         }
-    }
-};
+    };
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         var q = getUrlParameter("q");
         $("span.keyword").text(q);
         $("article.post").remove();
         $.ajax({
             url: '{{"index.xml"|absURL}}',
             dataType: "xml",
-            success: function(data) {
+            success: function (data) {
                 $(data).find("item").each(function () {
-                    var item=$(this);
-                    var title=item.find("title").text();
-                    if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0){
+                    var item = $(this);
+                    var title = item.find("title").text();
+                    if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
                         var url = item.find("link").text();
-                        var searchItem=`<article class="post"><header><h1 class="post-title"><a href="`+url+`">`+title+`</a></h1></header>`;
+                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `">` + title + `</a></h1></header>`;
                         var pubDate = new Date(item.find("pubDate").text())
-                        searchItem+=`<date class="post-meta meta-date">`+pubDate.getFullYear()+`年`+(pubDate.getMonth()+1)+`月`+pubDate.getDate()+`日</date>`;
-                        searchItem+=`<div class="post-content">`+item.find("description").text()+`……<p class="readmore"><a href="`+url+`">阅读全文</a></p></div></article>`;
+                        searchItem += `<date class="post-meta meta-date">` + pubDate.getFullYear() + `年` + (pubDate.getMonth() + 1) + `月` + pubDate.getDate() + `日</date>`;
+                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `">阅读全文</a></p></div></article>`;
 
                         $("div.res-cons").append(searchItem);
                     }
@@ -81,5 +65,4 @@ var getUrlParameter = function getUrlParameter(sParam) {
         });
     });
 </script>
-</body>
-</html>
+{{ end }}

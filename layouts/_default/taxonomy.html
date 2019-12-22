@@ -1,62 +1,44 @@
-{{ partial "head" . }}
+{{ define "content"}}
+<div class="res-cons">
+    {{ if eq .Data.Singular "category" }}
+    <h3 class="archive-title">
+        分类
+        <span class="keyword">{{ .Data.Term }}</span>
+        中的文章
+    </h3>
+    {{ else if eq .Data.Singular "tag" }}
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">{{ .Data.Term }}</span>
+        的文章
+    </h3>
+    {{ end }}
 
-<body>
-{{ partial "header" . }}
-
-<div id="body">
-    <div class="container">
-        <div class="col-group">
-
-            <div class="col-8" id="main">
-                <div class="res-cons">
-                    {{ if eq .Data.Singular "category" }}
-                    <h3 class="archive-title">
-                        分类
-                        <span class="keyword">{{ .Data.Term }}</span>
-                        中的文章
-                    </h3>
-                    {{ else if eq .Data.Singular "tag" }}
-                    <h3 class="archive-title">
-                        包含标签
-                        <span class="keyword">{{ .Data.Term }}</span>
-                        的文章
-                    </h3>
-                    {{ end }}
-
-                    {{ range $index,$data := .Paginator.Pages }}
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
-                            </date>
-                            {{ with .Params.Categories }}
-                            <div class="post-meta meta-category">
-                                |
-                                {{ range . }}
-                                    <a href="{{ "/categories/" | absLangURL }}{{ . | urlize }}">{{ . }}</a>
-                                {{ end }}
-                            </div>
-                            {{ end }}
-                            <div class="post-content">
-                                {{ .Summary }}……
-                                <p class="readmore"><a href="{{ .Permalink }}">阅读全文</a></p>
-                            </div>
-                        </article>
-                    {{ end }}
-
-                    {{ partial "paginator" . }}
-                </div>
-            </div>
-
-            {{ partial "sidebar" . }}
+    {{ range $index,$data := .Paginator.Pages }}
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
+        </date>
+        {{ with .Params.Categories }}
+        <div class="post-meta meta-category">
+            |
+            {{ range . }}
+            <a href='{{ "/categories/" | absLangURL }}{{ . | urlize }}'>{{ . }}</a>
+            {{ end }}
         </div>
-    </div>
-</div>
-{{ partial "footer" . }}
+        {{ end }}
+        <div class="post-content">
+            {{ .Summary }}……
+            <p class="readmore"><a href="{{ .Permalink }}">阅读全文</a></p>
+        </div>
+    </article>
+    {{ end }}
 
-</body>
-</html>
+    {{ partial "paginator" . }}
+</div>
+{{ end }}

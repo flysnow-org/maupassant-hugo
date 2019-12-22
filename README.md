@@ -41,10 +41,14 @@ Maupassant theme, ported to Hugo.
 
 ```bash
 cd <YOUR Bolg Root Dir>
-git clone https://github.com/rujews/maupassant-hugo themes/maupassant
+git clone https://github.com/flysnow-org/maupassant-hugo themes/maupassant
 ```
 
 ## 配置
+
+#### 依赖要求
+
+Hugo Version >= v 0.60.0
 
 #### 应用主题
 
@@ -52,40 +56,17 @@ git clone https://github.com/rujews/maupassant-hugo themes/maupassant
 theme = "maupassant"
 ```
 
-#### 基本配置
+#### 快速开始
 
-```toml
-baseURL = "http://www.flysnow.org"
-languageCode = "zh-CN"
-title = "飞雪无情的博客"
-theme = "maupassant"
+在主题的 [exampleSite](exampleSite/) 示例目录下有`config.toml `文件，把`config.toml `文件复制到你的站点目录下，然后根据自己的需求修改即可
 
-## 保持分类的原始名字（false会做转小写处理）
-preserveTaxonomyNames = true
-## 是否禁止URL Path转小写
-disablePathToLower = true
+**PS: 一定要使用`post`目录，而不是`posts`,一定要记住，所以如果你使用`hugo`命令，你应该`hugo new post/filename.md`这样创建**
 
-hasCJKLanguage = true
-summaryLength = 140
+**PS: 一定要使用`post`目录，而不是`posts`,一定要记住，所以如果你使用`hugo`命令，你应该`hugo new post/filename.md`这样创建**
 
-[author]
-  name = "飞雪无情"
+**PS: 一定要使用`post`目录，而不是`posts`,一定要记住，所以如果你使用`hugo`命令，你应该`hugo new post/filename.md`这样创建**
 
-[params]
-  author = "飞雪无情"
-  subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
-  keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
-  description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
-  busuanzi = true
-  localSearch = true
 
-[markup]
-  [markup.highlight]
-    lineNos = true
-    style = "github"
-```
-
-基本配置大家都比较熟悉，这是我的博客的配置，仅供参考。
 
 #### 代码高亮
 
@@ -431,7 +412,7 @@ disablePathToLower = true
 + Wordpress：https://github.com/iMuFeng/maupassant/
 + Ghost: https://github.com/LjxPrime/maupassant/
 + Hexo: https://github.com/tufu9441/maupassant-hexo
-+ Hugo: https://github.com/rujews/maupassant-hugo
++ Hugo: https://github.com/flysnow-org/maupassant-hugo
 
 ```
 

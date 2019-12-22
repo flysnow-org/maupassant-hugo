@@ -1,9 +1,6 @@
-<!doctype html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}zh-CN{{end}}">
 <head>
 
     <meta charset="utf-8">
-    {{ hugo.Generator }}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,10 +15,10 @@
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     <meta property="og:type" content="article">
         {{ with .Params.date }}
-    <meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05+08:00" }}">
+    <meta property="article:published_time" content='{{ .Format "2006-01-02T15:04:05+08:00" }}'>
         {{ end }}
         {{ with .Params.lastmod }}
-    <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05+08:00" }}">
+    <meta property="article:modified_time" content='{{ .Format "2006-01-02T15:04:05+08:00" }}'>
         {{ end }}
     <meta name="Keywords" content="{{ if .Keywords }}{{ .Keywords }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}">
@@ -34,8 +31,8 @@
     <meta property="og:url" content="{{ .Permalink }}">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="{{ "css/normalize.css" | relURL}}">
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href='{{ "css/normalize.css" | relURL}}'>
+    <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
@@ -54,6 +51,6 @@
 
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}
-        <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
+        <link rel="stylesheet" href='{{ "/css/" | relURL }}{{ . }}'>
     {{ end }}
 </head>

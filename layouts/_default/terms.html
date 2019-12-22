@@ -1,41 +1,23 @@
-{{ partial "head" . }}
+{{ define "content"}}
+<header>
+    {{ if eq .Data.Singular "category" }}
+        <h1>共有{{ len .Data.Terms }}个分类</h1>
+    {{ else if eq .Data.Singular "tag" }}
+        <h1>共有{{ len .Data.Terms }}个标签</h1>
+    {{ end }}
+</header>
+<div class="post-archive">
+    {{ range .Data.Terms.ByCount }}
+    <h2><a href="{{ path.Join $.Data.Plural .Term | urlize | absLangURL }}">{{ .Term }}</a> ({{ .Count }})</h2>
+    <ul class="listing">
+        {{ range .Pages }}
+        <li>
+            <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
 
-<body>
-{{ partial "header" . }}
-
-<div id="body">
-    <div class="container">
-        <div class="col-group">
-
-            <div class="col-8" id="main">
-                <header>
-                    {{ if eq .Data.Singular "category" }}
-                        <h1>共有{{ len .Data.Terms }}个分类</h1>
-                    {{ else if eq .Data.Singular "tag" }}
-                        <h1>共有{{ len .Data.Terms }}个标签</h1>
-                    {{ end }}
-                </header>
-                <div class="post-archive">
-                    {{ range .Data.Terms.ByCount }}
-                    <h2><a href="{{ path.Join $.Data.Plural .Term | urlize | absLangURL }}">{{ .Term }}</a> ({{ .Count }})</h2>
-                    <ul class="listing">
-                        {{ range .Pages }}
-                        <li>
-                            <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-                            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                    {{ end }}
-
-                </div>
-            </div>
-
-            {{ partial "sidebar" . }}
-        </div>
-    </div>
 </div>
-{{ partial "footer" . }}
-
-</body>
-</html>
+{{ end }}

@@ -1,34 +1,16 @@
-{{ partial "head" . }}
+{{ define "content"}}
+<div class="post-archive">
+    {{ range (where (where .Site.Pages "Type" "in" (slice "post" "posts")) "Kind" "page").GroupByDate "2006" }}
+    <h2>{{ .Key }}</h2>
+    <ul class="listing">
+        {{ range .Pages }}
+        <li>
+            <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
 
-<body>
-{{ partial "header" . }}
-
-<div id="body">
-    <div class="container">
-        <div class="col-group">
-
-            <div class="col-8" id="main">
-                <div class="post-archive">
-                    {{ range (where (where .Site.Pages "Type" "in" (slice "post" "posts")) "Kind" "page").GroupByDate "2006" }}
-                    <h2>{{ .Key }}</h2>
-                    <ul class="listing">
-                        {{ range .Pages }}
-                        <li>
-                            <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-                            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                    {{ end }}
-
-                </div>
-            </div>
-
-            {{ partial "sidebar" . }}
-        </div>
-    </div>
 </div>
-{{ partial "footer" . }}
-
-</body>
-</html>
+{{ end }}

@@ -1,7 +1,8 @@
 {{ define "content"}}
+{{- $paginator := .Paginate .Data.Pages.ByDate.Reverse 10 }}
 <div class="res-cons">
-    {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "post" "posts")) }}
     {{ range $index,$data := $paginator.Pages }}
+    {{ if not .Params.hidden }}
     <article class="post">
         <header>
             <h1 class="post-title">
@@ -24,6 +25,7 @@
         </div>
         <p class="readmore"><a href="{{ .Permalink }}">阅读全文</a></p>
     </article>
+    {{ end }}
     {{ end }}
     {{ partial "paginator" . }}
 </div>

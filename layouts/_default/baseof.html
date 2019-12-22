@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}zh-CN{{end}}">
+{{ partial "head" . }}
+
+<body>
+    {{ partial "header" . }}
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    {{ block "content" . }}{{ end }}
+                </div>
+
+                {{ partial "sidebar" . }}
+            </div>
+        </div>
+    </div>
+    {{ partial "footer" . }}
+</body>
+
+</html>

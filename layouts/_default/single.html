@@ -1,250 +1,54 @@
-{{ partial "head" . }}
-<body>
-{{ partial "header" . }}
-
-<div id="body">
-        {{ if .Params.toc -}}
-        <!--悬浮目录-->
-        <div id="virtual_toc_list" style="display: none">
-            {{.TableOfContents}}
+{{ define "content"}}
+<div class="res-cons">
+    {{ partial "toc" . }}
+    <article class="post">
+        <header>
+            <h1 class="post-title">{{ .Title }}</h1>
+        </header>
+        <date class="post-meta meta-date">
+            {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
+        </date>
+        {{ with .Params.Categories }}
+        <div class="post-meta">
+            <span>|</span>
+            {{ range . }}
+            <span class="meta-category"><a href='{{ "/categories/" | absLangURL }}{{ . | urlize }}'>{{ . }}</a></span>
+            {{ end }}
         </div>
-        <div id="float_toc_div" style="margin: 10px;border: 1px solid gray;z-index:99999;display: none;">
-            <header style="background-color: #f3f3f3;color: black;border-bottom: 1px solid gray;padding: 10px 10px 10px 10px;">
-                <strong id="toc_btn_open" style="color: black;font-size: large;">目录</strong>
-                <strong id="toc_btn_close" style="color: black;font-size: large;float: right">╳</strong>
-            </header>
-            <div id="toc_list" style="background-color: #f3f3f3;color: black;padding: 10px;">
-        
+        {{ end }}
+        {{ if .Site.Params.busuanzi }}
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        {{ end }}
+        {{ if .Params.toc }}
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
             </div>
         </div>
-        <style type="text/css">
-            #float_toc_div {
-                position: fixed;
-                display: none;
-                /* width: 10.6%; */
-                height: auto;
-                font-size: 13px;
-            }
-        
-            #toc_list a:hover,
-            #toc_list a:active {
-                color: #ba3925;
-            }
-        </style>
-        <script>
-            window.onload = function () {
-                let tocNavElem = document.getElementById("TableOfContents");
-                let floatTocDivElem = document.getElementById("float_toc_div");
-                let tocListElem = floatTocDivElem.getElementsByTagName('div')[0];
-                let colGroupElem = document.getElementById("body").getElementsByClassName("col-group")[0]
-                let floatTocWidth = (document.body.clientWidth - colGroupElem.offsetWidth) / 2 - 16;
-                var useFloatToc = false;
-
-                if (floatTocWidth >= 100) {
-                    useFloatToc = true;
-                    document.getElementById("toc_list").appendChild(tocNavElem);
-                    floatTocDivElem.style.display = 'block';
-                    floatTocDivElem.style.width = floatTocWidth + 'px';
-                    top();
-                    floatTocDivElem.style.left = '0px';
-
-                    function top() {
-                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
-                            floatTocDivElem.style.top = '0px';
-                        } else {
-                            floatTocDivElem.style.top = window.innerHeight / 9 + 'px';
-                        }
-                    }
-
-                    function ishide() {
-                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
-                            floatTocDivElem.style.top = '0px';
-                        } else {
-                            floatTocDivElem.style.display = 'block';
-                        }
-                    }
-
-                    window.onscroll = function () {
-                        ishide();
-                        if ((document.documentElement.scrollTop != 0) && (floatTocDivElem.style.display == 'block')) {
-                            top();
-                        }
-                    };
-
-                    window.onresize = function () {
-                        ishide();
-                    }
-
-                    document.getElementById("toc_btn_open").addEventListener('click', function () {
-                        switch (tocListElem.style.display) {
-                            case "none":
-                                document.getElementById("toc_btn_close").style.display = "";
-                                tocListElem.style.display = "";
-                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "1px solid gray";
-                                break;
-                            default:
-                                break;
-                        }
-                    }, false);
-
-                    document.getElementById("toc_btn_close").addEventListener('click', function () {
-                        switch (tocListElem.style.display) {
-                            case "":
-                                document.getElementById("toc_btn_close").style.display = "none";
-                                tocListElem.style.display = "none";
-                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "";
-                                break;
-                            default:
-                                break;
-                        }
-                    }, false);
-                } else {
-                    let fixedTocElem = document.getElementsByClassName("toc-article")[0];
-                    fixedTocElem.appendChild(tocNavElem);
-                    fixedTocElem.parentElement.style.display = "";
-                }
-                document.getElementById("virtual_toc_list").remove();
-            };   
-        </script>
-        {{- end }}
-        
-    <div class="container">
-        <div class="col-group">
-
-            <div class="col-8" id="main">
-                <div class="res-cons">
-                    <article class="post">
-                        <header>
-                            <h1 class="post-title">{{ .Title }}</h1>
-                        </header>
-                        <date class="post-meta meta-date">
-                            {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
-                        </date>
-                        {{ with .Params.Categories }}
-                        <div class="post-meta">
-                            <span>|</span>
-                            {{ range . }}
-                                <span class="meta-category"><a href="{{ "/categories/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></span>
-                            {{ end }}
-                        </div>
-                        {{ end }}
-                        {{ if .Site.Params.busuanzi }}
-                        <div class="post-meta">
-                            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span> 阅读</span></span>
-                        </div>
-                        {{ end }}
-                        {{ if .Params.toc }}
-                        <div class="clear" style="display: none">
-                            <div class="toc-article">
-                                <div class="toc-title">文章目录</div>
-                            </div>
-                        </div>
-                        {{ end }}
-                        <div class="post-content">
-                            {{ .Content }}
-                        </div>
-
-                        {{ partial "copyright" .}}
-
-                        {{ partial "related" . }}
-
-                        <div class="post-meta meta-tags">
-                            {{ if and (isset .Params "tags") .Params.tags }}
-                            <ul class="clearfix">
-                                {{ range .Params.Tags }}
-                                <li><a href="{{ "/tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-                                {{ end }}
-                            </ul>
-                            {{ else }}
-                            没有标签
-                            {{ end }}
-                        </div>
-                    </article>
-                    {{ partial "comments" . }}
-                </div>
-            </div>
-            {{ partial "sidebar" . }}
+        {{ end }}
+        <div class="post-content">
+            {{ .Content }}
         </div>
-    </div>
+
+        {{ partial "copyright" .}}
+
+        {{ partial "related" . }}
+
+        <div class="post-meta meta-tags">
+            {{ if and (isset .Params "tags") .Params.tags }}
+            <ul class="clearfix">
+                {{ range .Params.Tags }}
+                <li><a href='{{ "/tags/" | absLangURL }}{{ . | urlize }}'>{{ . }}</a></li>
+                {{ end }}
+            </ul>
+            {{ else }}
+            没有标签
+            {{ end }}
+        </div>
+    </article>
+    {{ partial "comments" . }}
 </div>
-{{ partial "footer" . }}
-<script type="text/javascript">
-(function(){
-	if (typeof self === 'undefined' || !self.Prism || !self.document) {
-		return;
-	}
-
-	if (!Prism.plugins.toolbar) {
-		console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
-
-		return;
-	}
-
-	var ClipboardJS = window.ClipboardJS || undefined;
-
-	if (!ClipboardJS && typeof require === 'function') {
-		ClipboardJS = require('clipboard');
-	}
-
-	var callbacks = [];
-
-	if (!ClipboardJS) {
-		var script = document.createElement('script');
-		var head = document.querySelector('head');
-
-		script.onload = function() {
-			ClipboardJS = window.ClipboardJS;
-
-			if (ClipboardJS) {
-				while (callbacks.length) {
-					callbacks.pop()();
-				}
-			}
-		};
-
-		script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
-		head.appendChild(script);
-	}
-
-	Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-		var linkCopy = document.createElement('button');
-		linkCopy.textContent = '复制代码';
-
-		if (!ClipboardJS) {
-			callbacks.push(registerClipboard);
-		} else {
-			registerClipboard();
-		}
-
-		return linkCopy;
-
-		function registerClipboard() {
-			var clip = new ClipboardJS(linkCopy, {
-				'text': function () {
-					return env.code;
-				}
-			});
-
-			clip.on('success', function() {
-				linkCopy.textContent = '复制成功!';
-
-				resetText();
-			});
-			clip.on('error', function () {
-				linkCopy.textContent = '按 Ctrl+C 复制';
-
-				resetText();
-			});
-		}
-
-		function resetText() {
-			setTimeout(function () {
-				linkCopy.textContent = '复制代码';
-			}, 5000);
-		}
-	});
-})();
-
-</script>
-</body>
-</html>
+{{ end }}
