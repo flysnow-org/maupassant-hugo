@@ -64,7 +64,7 @@ disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要�
 ## 配置 utteranc评论,教程参考 https://utteranc.es/
 [params.utteranc]
   enable = true
-  repo = "flysnow-org/comment"
+  repo = "your github repo" ##换成自己得
   issueTerm = "pathname"
   theme = "github-light"
 
