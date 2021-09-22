@@ -34,7 +34,7 @@
     <link rel="stylesheet" href='{{ "css/normalize.css" | relURL}}'>
     <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
     {{ range .AlternativeOutputFormats -}}
-        {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+        {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.FirstSuffix.Suffix .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
