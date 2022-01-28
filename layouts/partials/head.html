@@ -8,8 +8,13 @@
     {{ end }}
 
     {{ if .IsHome -}}
+    {{ if .Site.Params.subtitle -}}
     <title>{{ .Site.Title }} | {{ .Site.Params.subtitle}}</title>
     <meta property="og:title" content="{{ .Site.Title }} | {{ .Site.Params.subtitle}}">
+    {{ else -}}
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}">
+    {{ end -}}
     <meta property="og:type" content="website">
     <meta name="Keywords" content="{{.Site.Params.keywords}}">
     <meta name="description" content="{{ .Site.Params.description }}">
