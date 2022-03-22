@@ -125,6 +125,14 @@ Ads Preview [http://www.flysnow.org/](http://www.flysnow.org/)
 googleAnalytics = "GA ID"
 ```
 
+#### Google Analytics 4
+
+```toml
+[params]
+# Google Analytics 4
+googleAnalyticsID = "G-00000XXXXX"
+```
+
 #### Custonm Summaries
 
 Support Hugo Content Summaries `<!--more-->`。You can change summary length in `config.toml` config file.

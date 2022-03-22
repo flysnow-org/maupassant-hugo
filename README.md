@@ -191,6 +191,16 @@ type: "search"
 googleAnalytics = "GA ID"
 ```
 
+#### 添加GA4分析统计
+
+该主题已经支持了GA4分析统计，只需要在`config.toml`配置里加入如下配置即可。
+
+```toml
+[params]
+# Google Analytics 4
+googleAnalyticsID = "G-00000XXXXX"
+```
+
 #### 文章归档支持
 
 Hugo默认是不支持生成归档文件的，需要自己实现。该主题已经实现了文章归档，只需要在新建`content/archives/index.md`文件，文件内容为：
