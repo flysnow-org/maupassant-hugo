@@ -5,4 +5,5 @@ categories=[]
 date="{{ .Date }}"
 toc=true
 draft=true
+hiddenFromHomePage= false
 +++
