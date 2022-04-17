@@ -32,7 +32,7 @@ Maupassant theme, ported to Hugo.
 15. See Also 支持
 16. Disqus评论支持
 18. 自定义css、js
-19. utteranc评论
+19. utteranc和[waline](https://waline.js.org)评论
 20. 部分自定义的shortcode
 21. 文章自定义摘要
 22. 自定义广告支持
@@ -295,6 +295,18 @@ summaryLength = 140
 3. `title` 按页面title标题的方式。
 
 其他还有几个不常用，这里就不再赘述了。
+#### Waline 评论系统
+Waline一款从 Valine 衍生的带后端评论系统。快速、安全、免费部署、支持评论通知。详见[https://waline.js.org/](https://waline.js.org/)
+
+将```enable```值改为```true```即可启用
+
+```serverURL```可根据官网部署教程获取
+```toml
+[params.waline]
+    enable = false
+    placeholder = "说点什么吧..."
+    serverURL = "Your waline serverURL" #换成你的serverURL
+```
 
 #### 不蒜子页面计数器支持
 
@@ -445,6 +457,24 @@ disablePathToLower = true
   }
   ​```
   ```
+#### 支持在首页上隐藏某篇文章
+
+将 front matter 中的```hiddenFromHomePage```设置为```true``` 即可
+
+ *默认为```false```*
+
+```toml
++++
+title = '{{ replace .Name "-" " " | title }}'
+tags = []
+categories = []
+date = "{{ .Date }}"
+toc = true
+draft = true
+hiddenFromHomePage = false
++++
+
+```
 
 ## 贡献
 
