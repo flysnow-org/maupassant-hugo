@@ -11,7 +11,7 @@
             <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
         </div>
         <div class="github-badge">
-            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+            <a href="{{ .Site.BaseURL | absURL }}" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">{{.Site.Author.name}}</span></a>
         </div>
         <div class="github-badge">
             <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
@@ -76,7 +76,7 @@
             })();
         </script>
     {{- end -}}
-    
+
     <!-- sequence必须要在flow加载之后，否则sequence渲染不成功，原因待分析 -->
     <!-- js-sequence-diagrams -->
     {{- if and (or .Params.sequenceDiagrams.enable (and .Site.Params.sequenceDiagrams.enable (ne .Params.sequenceDiagrams.enable false))) (or .IsPage .IsHome) -}}
@@ -112,7 +112,7 @@
         })();
         </script>
     {{- end -}}
-    
+
     <script type="text/javascript">
         window.MathJax = {
             tex2jax: {
@@ -122,7 +122,7 @@
             };
     </script>
     <script src='//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    
+
     {{- if .Site.Params.fancybox -}}
         <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     {{- end -}}
