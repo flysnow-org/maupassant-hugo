@@ -16,7 +16,7 @@
         <div class="post-meta">
             <span>|</span>
             {{ range . }}
-            <span class="meta-category"><a href='{{ "/categories/" | absLangURL }}{{ . | urlize }}'>{{ . }}</a></span>
+            <span class="meta-category"><a href='{{ "categories/" | relURL }}{{ . | urlize }}'>{{ . }}</a></span>
             {{ end }}
         </div>
         {{ end }}

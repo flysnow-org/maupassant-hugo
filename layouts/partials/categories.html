@@ -1,4 +1,4 @@
-<h3 class="widget-title">分类</h3>
+<h3 class="widget-title"><a href='{{ "categories/" | relURL }}'>分类</a></h3>
 <ul class="widget-list">
     {{ range .Site.Taxonomies.categories }}
     <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>

@@ -3,10 +3,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if .Site.Params.busuanzi }}
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    {{ end }}
 
     {{ if .IsHome -}}
+    {{ if .Site.Params.subtitle -}}
     <title>{{ .Site.Title }} | {{ .Site.Params.subtitle}}</title>
     <meta property="og:title" content="{{ .Site.Title }} | {{ .Site.Params.subtitle}}">
+    {{ else -}}
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}">
+    {{ end -}}
     <meta property="og:type" content="website">
     <meta name="Keywords" content="{{.Site.Params.keywords}}">
     <meta name="description" content="{{ .Site.Params.description }}">
@@ -29,26 +37,25 @@
         {{- end }}
     {{- end }}
     <meta property="og:url" content="{{ .Permalink }}">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href='{{ "favicon.ico" | relURL }}'  type="image/x-icon">
 
     <link rel="stylesheet" href='{{ "css/normalize.css" | relURL}}'>
     <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
     {{ range .AlternativeOutputFormats -}}
-        {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.FirstSuffix.Suffix .Permalink $.Site.Title | safeHTML }}
+
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+
     {{ end -}}
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     {{ if .Site.Params.googleAd }}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "{{ .Site.Params.googleAd }}",
-        enable_page_level_ads: true
-    });
-    </script>
+    <script data-ad-client="{{ .Site.Params.googleAd }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     {{ end }}
-
-
+    
+    {{if .Site.Params.fancybox }}
+        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    {{ end }}
+    
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}
         <link rel="stylesheet" href='{{ "/css/" | relURL }}{{ . }}'>

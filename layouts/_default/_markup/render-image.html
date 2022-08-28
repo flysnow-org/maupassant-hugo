@@ -1,0 +1,29 @@
+{{- $img_destination := .Destination -}}
+{{- if (and .Page.Site.Params.image_cdn.enable (not .Page.Site.IsServer)) -}}
+    {{if hasPrefix .Destination "/" }}
+    {{ $img_destination = (print .Page.Site.Params.image_cdn.HOST .Destination) }}
+    {{ else if not (hasPrefix .Destination "http") }}
+    {{ $img_destination = (print .Page.Site.Params.image_cdn.HOST (path.Join .Page.RelPermalink .Destination)) }}
+    {{ end }}
+{{- end -}}
+
+{{- if .Title -}}
+<figure class="max-w-2xl mx-auto overflow-hidden">
+    {{if .Page.Site.Params.fancybox }}
+    <a data-fancybox="gallery" href="{{ $img_destination | safeURL }}">
+        <img alt="{{ $.Text }}" src="{{ $img_destination | safeURL }}" />
+    </a>
+    {{ else }}
+        <img alt="{{ $.Text }}" src="{{ $img_destination | safeURL }}" />
+    {{ end }}
+    <figcaption class="p-2 text-center">{{ with $.Title | safeHTML }}{{ . }}{{ end }}</figcaption>
+</figure>
+{{- else -}}
+    {{if .Page.Site.Params.fancybox }}
+        <a data-fancybox="gallery" href="{{ $img_destination | safeURL }}">
+            <img class="mx-auto" alt="{{ $.Text }}" src="{{ $img_destination | safeURL }}" />
+        </a>
+    {{ else }}
+        <img class="mx-auto" alt="{{ $.Text }}" src="{{ $img_destination | safeURL }}" />   
+    {{ end }}
+{{- end -}}

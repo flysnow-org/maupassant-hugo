@@ -10,13 +10,13 @@
 
                 <div class="col-8" id="main">
                     {{ block "content" . }}{{ end }}
+                    {{ partial "footer" . }}
                 </div>
 
                 {{ partial "sidebar" . }}
             </div>
         </div>
     </div>
-    {{ partial "footer" . }}
 </body>
 
 </html>

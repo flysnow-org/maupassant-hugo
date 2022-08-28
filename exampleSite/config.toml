@@ -2,7 +2,7 @@ baseURL = "https://www.flysnow.org"
 languageCode = "zh-CN"
 title = "飞雪无情的博客"
 theme = "maupassant"
-googleAnalytics = ""  # UA-XXXXXXXX-X
+googleAnalytics = ""  # UA-XXXXXXXX-X/G-XXXXXXXXXX
 
 ## 保持分类的原始名字（false会做转小写处理）
 preserveTaxonomyNames = true
@@ -23,7 +23,7 @@ disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要�
   keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
   description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
   busuanzi = true #启用不算子网页统计
-  googleAd = "ca-pub-4031353640611810"  #ca-pub-xxxxxxxxxxxxxx
+  googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
   localSearch = true # 启用本地搜索
 
   # 这里我存放在了主题的static文件夹里，根目录的似乎也可以
@@ -67,7 +67,11 @@ disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要�
   repo = "your github repo" ##换成自己得
   issueTerm = "pathname"
   theme = "github-light"
-
+## 配置 waline 评论系统,教程参考 https://waline.js.org/
+[params.waline]
+  enable = false
+  placeholder = "说点什么吧..."
+  serverURL = "Your waline serverURL" #换成你的serverURL
 ## 开启版权声明，协议名字和链接都可以换
 [params.cc]
     name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
