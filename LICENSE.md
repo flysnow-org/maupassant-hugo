@@ -1,5 +1,4 @@
 The MIT License (MIT)
-TEST
 Copyright (c) 2017 Joker Qyou
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
