@@ -60,18 +60,21 @@
         }
     }
 </style>
-<div class="post-toc" style="position: absolute; top: 188px;">
+<div class="post-toc" style="position: absolute; top: 188px;" onmousemove="changeDiv()"
+     onmouseout="resetDiv()">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
         {{.TableOfContents}}
     </div>
 </div>
 <script type="text/javascript">
+    let width = 'auto';
     $(document).ready(function () {
         var postToc = $(".post-toc");
         if (postToc.length) {
             var leftPos = $("#main").offset().left;
             if (leftPos < 220) {
+                width = leftPos-10;
                 postToc.css({ "width": leftPos - 10, "margin-left": (0 - leftPos) })
             }
 
@@ -96,5 +99,19 @@
             $(".post-toc").remove();
         }
     })
+    function changeDiv(){
+        var postToc = $(".post-toc");
+        var leftPos = $("#main").offset().left;
+        if (leftPos < 220) {
+            postToc.css('width', 'auto')
+        }
+    }
+    function resetDiv(){
+        var postToc = $(".post-toc");
+        var leftPos = $("#main").offset().left;
+        if (leftPos < 220) {
+            postToc.css('width', width)
+        }
+    }
 </script>
 {{- end }}
