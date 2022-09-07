@@ -2,7 +2,7 @@
 <ul class="widget-list">
     {{ range first 10 (where (where .Site.Pages "Type" "in" (slice "post" "posts")) "Kind" "page") }}
     <li>
-        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        <a href="{{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
     </li>
     {{ end }}
 </ul>

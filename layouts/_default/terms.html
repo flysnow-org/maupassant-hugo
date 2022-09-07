@@ -1,19 +1,22 @@
 {{ define "content"}}
 <header>
     {{ if eq .Data.Singular "category" }}
-        <h1>共有{{ len .Data.Terms }}个分类</h1>
+    <h1>共有{{ len .Data.Terms }}个分类</h1>
     {{ else if eq .Data.Singular "tag" }}
-        <h1>共有{{ len .Data.Terms }}个标签</h1>
+    <h1>共有{{ len .Data.Terms }}个标签</h1>
     {{ end }}
 </header>
 <div class="post-archive">
     {{ range .Data.Terms.ByCount }}
-    <h2><a href="{{ path.Join $.Data.Plural .Term | urlize | absLangURL }}">{{ .Term }}</a> ({{ .Count }})</h2>
+    <h2>
+        <a href="{{ path.Join $.Data.Plural .Term | urlize | absLangURL }}" target="_blank">{{ .Term }}</a>
+        ({{ .Count }})
+    </h2>
     <ul class="listing">
         {{ range .Pages }}
         <li>
             <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
         </li>
         {{ end }}
     </ul>

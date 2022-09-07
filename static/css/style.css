@@ -15,7 +15,6 @@
 
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'icomoon';
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -98,14 +97,12 @@ mark {
     padding: 3px 3px 3px 5px;
     background: #fffdd1;
 }
-pre, code {
-    font-family:Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
-    font-size:.92857em;
-}
 pre {
+    font-family:Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
     overflow:auto;
     border: 1px solid #ddd;
     display: block;
+    margin: 0px;
 }
 code {
     display: inline-block;
@@ -220,8 +217,6 @@ textarea {
 }
 #nav-menu a:first-child {
     border:none;
-}
-#nav-menu a:hover {
 }
 #nav-menu a.current {
     border:1px solid #ddd;
@@ -1040,7 +1035,6 @@ table tr:nth-child(2n) {
 
 table tr {
     border: 0;
-    border-top: 1px solid #CCC;
     background-color: white;
 }
   
@@ -1049,6 +1043,10 @@ table tr th, table tr td {
     border: 1px solid #CCC;
     padding: 0.5em 1em;
     text-align: left;
+}
+
+table tbody tr td:nth-of-type(1) pre {
+    margin-right: -1px;
 }
 
 .github-badge {

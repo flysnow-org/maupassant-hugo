@@ -25,7 +25,7 @@ Maupassant theme, ported to Hugo.
 8. 支持文章按年份日期进行归档
 9. 支持GA分析统计
 17. 不蒜子页面计数器支持
-11. 代码高亮、代码行号
+11. 代码高亮、代码行号、代码拷贝
 10. sitemap站点地图
 5. RSS支持，并且可以自动发现RSS
 14. Google站内搜索

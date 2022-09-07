@@ -12,7 +12,9 @@
         <div class="post-meta">
             <span>|</span>
             {{ range . }}
-            <span class="meta-category"><a href='{{ "categories/" | relURL }}{{ . | urlize }}'>{{ . }}</a></span>
+            <span class="meta-category">
+                <a href='{{ "categories/" | relURL }}{{ . | urlize }}' target="_blank">{{ . }}</a>
+            </span>
             {{ end }}
         </div>
         {{ end }}
@@ -41,7 +43,7 @@
             {{ if and (isset .Params "tags") .Params.tags }}
             <ul class="clearfix">
                 {{ range .Params.Tags }}
-                <li><a href='{{ "tags/" | relURL }}{{ . | urlize }}'>{{ . }}</a></li>
+                <li><a href='{{ "tags/" | relURL }}{{ . | urlize }}' target="_blank">{{ . }}</a></li>
                 {{ end }}
             </ul>
             {{ else }}

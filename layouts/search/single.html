@@ -9,7 +9,7 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="链接">标题</a>
+                <a href="链接" target="_blank">标题</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -17,7 +17,7 @@
         </date>
         <div class="post-content">
             概要……
-            <p class="readmore"><a href="链接">阅读全文</a></p>
+            <p class="readmore"><a href="链接" target="_blank">阅读全文</a></p>
         </div>
     </article>
 
@@ -25,7 +25,7 @@
 
 <script type="text/javascript">
 
-    var getUrlParameter = function getUrlParameter(sParam) {
+    var getUrlParameter = function getUrlParameter (sParam) {
         var sPageURL = window.location.search.substring(1),
             sURLVariables = sPageURL.split('&'),
             sParameterName,
@@ -53,10 +53,10 @@
                     var title = item.find("title").text();
                     if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
                         var url = item.find("link").text();
-                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `">` + title + `</a></h1></header>`;
+                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `" target="_blank">` + title + `</a></h1></header>`;
                         var pubDate = new Date(item.find("pubDate").text())
                         searchItem += `<date class="post-meta meta-date">` + pubDate.getFullYear() + `年` + (pubDate.getMonth() + 1) + `月` + pubDate.getDate() + `日</date>`;
-                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `">阅读全文</a></p></div></article>`;
+                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `" target="_blank">阅读全文</a></p></div></article>`;
 
                         $("div.res-cons").append(searchItem);
                     }
