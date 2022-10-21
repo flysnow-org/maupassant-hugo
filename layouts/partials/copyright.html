@@ -1,9 +1,9 @@
 {{ if and (isset .Site.Params "cc")  (in (slice "post" "posts") .Type) }}
 <div class="post-archive">
     <ul class="post-copyright">
-        <li><strong>原文作者：</strong><a rel="author" href="{{ .Site.BaseURL}}">{{ if isset .Site.Author "name" }}{{.Site.Author.name}}{{ else }}{{.Site.Title}}{{ end }}</a></li>
-        <li style="word-break:break-all"><strong>原文链接：</strong><a href="{{ .Permalink}}">{{ .Permalink}}</a></li>
-        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="{{.Site.Params.cc.link}}">{{.Site.Params.cc.name}}</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+        <li><strong>{{ i18n "copyright-author" }}</strong><a rel="author" href="{{ .Site.BaseURL}}">{{ if isset .Site.Author "name" }}{{.Site.Author.name}}{{ else }}{{.Site.Title}}{{ end }}</a></li>
+        <li style="word-break:break-all"><strong>{{ i18n "copyright-link" }}</strong><a href="{{ .Permalink}}">{{ .Permalink}}</a></li>
+        <li><strong>{{ i18n "copyright-license" }}</strong>{{ i18n "copyright-license-01" }}<a rel="license" href="{{.Site.Params.cc.link}}">{{.Site.Params.cc.name}}</a>. {{ i18n "copyright-license-02" }}</li>
     </ul>
 </div>
 <br/>

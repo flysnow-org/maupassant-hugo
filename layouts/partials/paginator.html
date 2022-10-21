@@ -5,7 +5,7 @@
 <ol class="page-navigator">
     {{ if .HasPrev }}
     <li class="prev">
-        <a href="{{ .Prev.URL | absLangURL }}">上一页</a>
+        <a href="{{ .Prev.URL | absLangURL }}">{{ i18n "previous" }}</a>
     </li>
     {{ end }}
 
@@ -46,10 +46,10 @@
     {{ end }}
 
     {{ if .HasNext }}
-    
+
 
     <li class="next">
-        <a href="{{ .Next.URL | absLangURL }}">下一页</a>
+        <a href="{{ .Next.URL | absLangURL }}">{{ i18n "next" }}</a>
     </li>
     {{ end }}
 </ol>
@@ -58,7 +58,7 @@
 <ol class="page-navigator">
     {{ if .HasPrev }}
     <li class="prev">
-        <a href="{{ .Prev.URL | absLangURL }}">上一页</a>
+        <a href="{{ .Prev.URL | absLangURL }}">{{ i18n "previous" }}</a>
     </li>
     {{ end }}
 
@@ -70,7 +70,7 @@
 
     {{ if .HasNext }}
     <li class="next">
-        <a href="{{ .Next.URL | absLangURL }}">下一页</a>
+        <a href="{{ .Next.URL | absLangURL }}">{{ i18n "next" }}</a>
     </li>
     {{ end }}
 </ol>

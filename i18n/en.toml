@@ -1,0 +1,99 @@
+# Lang: English (generic)
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# BGN: Date and Time Formats
+  [datetimeformat]
+    other = "2006-01-02"
+  [datetimelongtzd]
+    other = "2006-01-02 15:04:05 Z07:00"
+  [datetimelongtzn]
+    other = "2006-01-02 15:04:05 MST"
+  [datetimetzd]
+    other = "2006-01-02 15:04 Z07:00"
+  [datetimetzn]
+    other = "2006-01-02 15:04 MST"
+  [datetimeonly]
+    other = "2006-01-02 15:04"
+  [dateonly]
+    other = "2006-01-02"
+  [timelongtzd]
+    other = "15:04:05 Z07:00"
+  [timelongtzn]
+    other = "15:04:05 MST"
+  [timetzd]
+    other = "15:04 Z07:00"
+  [timetzn]
+    other = "15:04 MST"
+  [timeonly]
+    other = "15:04"
+# END: Date and Time Formats
+
+# BGN: Base
+  [home]
+    other = "Home"
+
+  [categories]
+    one = "Category"
+    other = "Categories"
+  [tags]
+    one = "Tag"
+    other = "Tags"
+
+  [readmore]
+    other = "Read more"
+
+  [next]
+    other = "Next"
+  [previous]
+    other = "Previous"
+
+  [toc]
+    other = "Table of Contents"
+# END: Base
+
+# BGN: Theme
+  [ads]
+    other = "Ads"
+
+  [articles]
+    other = "articles"
+  [articles-latest]
+    other = "Latest articles"
+  [articles-related]
+    other = "See Also"
+
+  [busuanzi]
+    other = "reads"
+
+  [feed-rss]
+    other = "RSS"
+
+  [links]
+    other = "Links"
+
+  [meta]
+    other = "Meta"
+
+  [tagszero]
+    other = "No tags"
+
+  [search]
+    other = "Search: "
+  [search-keyword]
+    other = "Keyword"
+  [search-results]
+    other = "results"
+# END: Theme
+
+# BGN: Copyright
+  [copyright-author]
+    other = "Author: "
+  [copyright-link]
+    other = "Link: "
+  [copyright-license]
+    other = "License: "
+  [copyright-license-01]
+    other = "This work is under a "
+  [copyright-license-02]
+    other = "Kindly fulfill the requirements of the aforementioned License when adapting or creating a derivative of this work."
+# END: Copyright

@@ -9,23 +9,11 @@
                 <a href="{{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
-        </date>
-        {{ with .Params.Categories }}
-        <div class="post-meta">
-            <span>|</span>
-            {{ range . }}
-            <span class="meta-category">
-                <a href='{{ "categories/" | relURL }}{{ . | urlize }}' target="_blank">{{ . }}</a>
-            </span>
-            {{ end }}
-        </div>
-        {{ end }}
+        {{ partial "post-meta.html" . }}
         <div class="post-content">
             {{ .Summary }}……
         </div>
-        <p class="readmore"><a href="{{ .Permalink }}" target="_blank">阅读全文</a></p>
+        <p class="readmore"><a href="{{ .Permalink }}" target="_blank">{{ i18n "readmore" }}</a></p>
     </article>
     {{ end }}
     {{ end }}

@@ -2,15 +2,19 @@
 <div class="res-cons">
     {{ if eq .Data.Singular "category" }}
     <h3 class="archive-title">
-        分类
+        {{ range .Site.Taxonomies.categories.ByCount }}
+            <span>{{ .Count }}</span>
+        {{ end }}
         <span class="keyword">{{ .Data.Term }}</span>
-        中的文章
+        {{ i18n "articles" }}
     </h3>
     {{ else if eq .Data.Singular "tag" }}
     <h3 class="archive-title">
-        包含标签
+        {{ range .Site.Taxonomies.tags.ByCount }}
+        <span>{{ .Count }}</span>
+        {{ end }}
         <span class="keyword">{{ .Data.Term }}</span>
-        的文章
+        {{ i18n "articles" }}
     </h3>
     {{ end }}
 
@@ -21,20 +25,10 @@
                 <a href="{{ .Permalink }}" target="_blank">{{ .Title }}</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
-        </date>
-        {{ with .Params.Categories }}
-        <div class="post-meta meta-category">
-            |
-            {{ range . }}
-            <a href='{{ "categories/" | relURL }}{{ . | urlize }}' target="_blank">{{ . }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
+        {{ partial "post-meta.html" . }}
         <div class="post-content">
             {{ .Summary }}……
-            <p class="readmore"><a href="{{ .Permalink }}" target="_blank">阅读全文</a></p>
+            <p class="readmore"><a href="{{ .Permalink }}" target="_blank">{{ i18n "readmore" }}</a></p>
         </div>
     </article>
     {{ end }}
