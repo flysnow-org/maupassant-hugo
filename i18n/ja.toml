@@ -1,0 +1,99 @@
+# Lang: Japanese
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# BGN: Date and Time Formats
+  [datetimeformat]
+    other = "2006年1月2日"
+  [datetimelongtzd]
+    other = "2006年1月2日 15:04:05 Z07:00"
+  [datetimelongtzn]
+    other = "2006年1月2日 15:04:05 MST"
+  [datetimetzd]
+    other = "2006年1月2日 15:04 Z07:00"
+  [datetimetzn]
+    other = "2006年1月2日 15:04 MST"
+  [datetimeonly]
+    other = "2006年1月2日 15:04"
+  [dateonly]
+    other = "2006年1月2日"
+  [timelongtzd]
+    other = " 15:04:05 Z07:00"
+  [timelongtzn]
+    other = " 15:04:05 MST"
+  [timetzd]
+    other = " 15:04 Z07:00"
+  [timetzn]
+    other = " 15:04 MST"
+  [timeonly]
+    other = " 15:04"
+# END: Date and Time Formats
+
+# BGN: Base
+  [home]
+    other = "自宅"
+
+  [categories]
+    one = "カテゴリ"
+    other = "カテゴリ"
+  [tags]
+    one = "タグ"
+    other = "タグ"
+
+  [readmore]
+    other = "詳細はこちら"
+
+  [next]
+    other = "次へ"
+  [previous]
+    other = "前の"
+
+  [toc]
+    other = "目次"
+# END: Base
+
+# BGN: Theme
+  [ads]
+    other = "広告です"
+
+  [articles]
+    other = "記事です"
+  [articles-latest]
+    other = "最新の記事です"
+  [articles-related]
+    other = "関連記事です"
+
+  [busuanzi]
+    other = "読みます。"
+
+  [feed-rss]
+    other = "RSSフィード"
+
+  [links]
+    other = "リンク"
+
+  [meta]
+    other = "メタ"
+
+  [tagszero]
+    other = "タグなし"
+
+  [search]
+    other = "検索"
+  [search-keyword]
+    other = "キーワード"
+  [search-results]
+    other = "検索結果"
+# END: Theme
+
+# BGN: Copyright
+  [copyright-author]
+    other = "作成者:"
+  [copyright-link]
+    other = "リンク:"
+  [copyright-license]
+    other = "ライセンス:"
+  [copyright-license-01]
+    other = "この作業は、次の条件の下にあります。"
+  [copyright-license-02]
+    other = "本作業のデリバティブを適用または作成する場合は、上記のライセンスの要件を満たしてください。"
+# END: Copyright

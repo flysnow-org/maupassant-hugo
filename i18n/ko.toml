@@ -1,0 +1,99 @@
+# Lang: Korean (South)
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# BGN: Date and Time Formats
+  [datetimeformat]
+    other = "2006년 01월 02일"
+  [datetimelongtzd]
+    other = "2006년 01월 02일 15:04:05 Z07:00"
+  [datetimelongtzn]
+    other = "2006년 01월 02일 15:04:05 MST"
+  [datetimetzd]
+    other = "2006년 01월 02일 15:04 Z07:00"
+  [datetimetzn]
+    other = "2006년 01월 02일 15:04 MST"
+  [datetimeonly]
+    other = "2006년 01월 02일 15:04"
+  [dateonly]
+    other = "2006년 01월 02일"
+  [timelongtzd]
+    other = "15:04:05 Z07:00"
+  [timelongtzn]
+    other = "15:04:05 MST"
+  [timetzd]
+    other = "15:04 Z07:00"
+  [timetzn]
+    other = "15:04 MST"
+  [timeonly]
+    other = "15:04"
+# END: Date and Time Formats
+
+# BGN: Base
+  [home]
+    other = "집이에요"
+
+  [categories]
+    one = "분류"
+    other = "분류"
+  [tags]
+    one = "태그입니다."
+    other = "태그입니다."
+
+  [readmore]
+    other = "더 읽기"
+
+  [next]
+    other = "다음 분."
+  [previous]
+    other = "이전의"
+
+  [toc]
+    other = "목차."
+# END: Base
+
+# BGN: Theme
+  [ads]
+    other = "광고"
+
+  [articles]
+    other = "기사들"
+  [articles-latest]
+    other = "최신 기사입니다."
+  [articles-related]
+    other = "관련기사입니다"
+
+  [busuanzi]
+    other = "읽습니다."
+
+  [feed-rss]
+    other = "RSS 피드"
+
+  [links]
+    other = "링크입니다."
+
+  [meta]
+    other = "메타"
+
+  [tagszero]
+    other = "태그 없음"
+
+  [search]
+    other = "서치"
+  [search-keyword]
+    other = "핵심어"
+  [search-results]
+    other = "결과."
+# END: Theme
+
+# BGN: Copyright
+  [copyright-author]
+    other = "작가: "
+  [copyright-link]
+    other = "링크: "
+  [copyright-license]
+    other = " 허가하다: "
+  [copyright-license-01]
+    other = "이 작업은 아래에 있습니다."
+  [copyright-license-02]
+    other = "이 작업의 파생 모델을 수정하거나 작성할 때 앞서 언급한 라이센스의 요구 사항을 충족하십시오."
+# END: Copyright
