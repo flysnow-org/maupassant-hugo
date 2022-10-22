@@ -1,10 +1,10 @@
 {{ define "content"}}
-{{- $datetimeformat := i18n "datetimeformat" -}}
+{{- $datetime_format := i18n "Datetime_format" -}}
 <div class="res-cons">
     <h3 class="archive-title">
-        {{ i18n "search" }}
-        <span class="keyword">{{ i18n "search-keyword" }}</span>
-        {{ i18n "search-results" }}
+        {{ i18n "Search" }}
+        <span class="keyword">{{ i18n "Search_keyword" }}</span>
+        {{ i18n "Search_results" }}
     </h3>
 
     <article class="post">
@@ -13,10 +13,10 @@
                 <a href="链接" target="_blank">标题</a>
             </h1>
         </header>
-        {{ if not .PublishDate.IsZero }}<time datetime="{{ .PublishDate.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="post-meta meta-date dt-published">{{ time.Format $datetimeformat .PublishDate }}</time>{{ end }}
+        {{ if not .PublishDate.IsZero }}<time datetime="{{ .PublishDate.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="post-meta meta-date dt-published">{{ time.Format $datetime_format .PublishDate }}</time>{{ end }}
         <div class="post-content">
             概要……
-            <p class="readmore"><a href="链接" target="_blank">{{ i18n "readmore" }}</a></p>
+            <p class="readmore"><a href="链接" target="_blank">{{ i18n "continueReading" }}</a></p>
         </div>
     </article>
 
@@ -55,7 +55,7 @@
                         var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `" target="_blank">` + title + `</a></h1></header>`;
                         var pubDate = new Date(item.find("pubDate").text())
                         searchItem += `<time class="post-meta meta-date">` + pubDate.getFullYear() + `-` + (pubDate.getMonth() + 1) + `-` + pubDate.getDate() + `</time>`;
-                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `" target="_blank">{{ i18n "readmore" }}</a></p></div></article>`;
+                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `" target="_blank">{{ i18n "continueReading" }}</a></p></div></article>`;
 
                         $("div.res-cons").append(searchItem);
                     }

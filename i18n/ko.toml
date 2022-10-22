@@ -1,32 +1,10 @@
 # Lang: Korean (South)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# BGN: Date and Time Formats
-  [datetimeformat]
+# BGN: Date and Time Format
+  [Datetime_format]
     other = "2006년 01월 02일"
-  [datetimelongtzd]
-    other = "2006년 01월 02일 15:04:05 Z07:00"
-  [datetimelongtzn]
-    other = "2006년 01월 02일 15:04:05 MST"
-  [datetimetzd]
-    other = "2006년 01월 02일 15:04 Z07:00"
-  [datetimetzn]
-    other = "2006년 01월 02일 15:04 MST"
-  [datetimeonly]
-    other = "2006년 01월 02일 15:04"
-  [dateonly]
-    other = "2006년 01월 02일"
-  [timelongtzd]
-    other = "15:04:05 Z07:00"
-  [timelongtzn]
-    other = "15:04:05 MST"
-  [timetzd]
-    other = "15:04 Z07:00"
-  [timetzn]
-    other = "15:04 MST"
-  [timeonly]
-    other = "15:04"
-# END: Date and Time Formats
+# END: Date and Time Format
 
 # BGN: Base
   [home]
@@ -39,7 +17,7 @@
     one = "태그입니다."
     other = "태그입니다."
 
-  [readmore]
+  [continueReading]
     other = "더 읽기"
 
   [next]
@@ -55,17 +33,17 @@
   [ads]
     other = "광고"
 
-  [articles]
+  [Articles]
     other = "기사들"
-  [articles-latest]
+  [Articles_latest]
     other = "최신 기사입니다."
-  [articles-related]
+  [Articles_related]
     other = "관련기사입니다"
 
   [busuanzi]
     other = "읽습니다."
 
-  [feed-rss]
+  [Feed_rss]
     other = "RSS 피드"
 
   [links]
@@ -74,26 +52,26 @@
   [meta]
     other = "메타"
 
-  [tagszero]
+  [tagsNone]
     other = "태그 없음"
 
-  [search]
+  [Search]
     other = "서치"
-  [search-keyword]
+  [Search_keyword]
     other = "핵심어"
-  [search-results]
+  [Search_results]
     other = "결과."
 # END: Theme
 
 # BGN: Copyright
-  [copyright-author]
+  [Copyright_author]
     other = "작가: "
-  [copyright-link]
+  [Copyright_link]
     other = "링크: "
-  [copyright-license]
+  [Copyright_license]
     other = " 허가하다: "
-  [copyright-license-01]
+  [Copyright_license_workUnder]
     other = "이 작업은 아래에 있습니다."
-  [copyright-license-02]
+  [Copyright_license_note]
     other = "이 작업의 파생 모델을 수정하거나 작성할 때 앞서 언급한 라이센스의 요구 사항을 충족하십시오."
 # END: Copyright

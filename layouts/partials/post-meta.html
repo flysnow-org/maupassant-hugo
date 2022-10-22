@@ -1,7 +1,7 @@
-{{- $datetimeformat := i18n "datetimeformat" -}}
+{{- $datetime_format := i18n "Datetime_format" -}}
 {{ if not .PublishDate.IsZero }}
   <time datetime="{{ .PublishDate.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="post-meta meta-date dt-published">
-    {{ time.Format $datetimeformat .PublishDate }}
+    {{ time.Format $datetime_format .PublishDate }}
   </time>
 {{ end }}
 {{ with .Params.Categories }}

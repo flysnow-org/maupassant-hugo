@@ -1,32 +1,10 @@
 # Lang: Simplified Chinese (China)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# BGN: Date and Time Formats
-  [datetimeformat]
+# BGN: Date and Time Format
+  [Datetime_format]
     other = "2006年1月2日"
-  [datetimelongtzd]
-    other = "2006年1月2日 15:04:05 Z07:00"
-  [datetimelongtzn]
-    other = "2006年1月2日 15:04:05 MST"
-  [datetimetzd]
-    other = "2006年1月2日 15:04 Z07:00"
-  [datetimetzn]
-    other = "2006年1月2日 15:04 MST"
-  [datetimeonly]
-    other = "2006年1月2日 15:04"
-  [dateonly]
-    other = "2006年1月2日"
-  [timelongtzd]
-    other = " 15:04:05 Z07:00"
-  [timelongtzn]
-    other = " 15:04:05 MST"
-  [timetzd]
-    other = " 15:04 Z07:00"
-  [timetzn]
-    other = " 15:04 MST"
-  [timeonly]
-    other = " 15:04"
-# END: Date and Time Formats
+# END: Date and Time Format
 
 # BGN: Base
   [home]
@@ -39,7 +17,7 @@
     one = "标签"
     other = "标签"
 
-  [readmore]
+  [continueReading]
     other = "阅读全文"
 
   [next]
@@ -55,17 +33,17 @@
   [ads]
     other = "福利派送"
 
-  [articles]
+  [Articles]
     other = "中的文章"
-  [articles-latest]
+  [Articles_latest]
     other = "最近文章"
-  [articles-related]
+  [Articles_related]
     other = "相关文章"
 
   [busuanzi]
     other = "阅读"
 
-  [feed-rss]
+  [Feed_rss]
     other = "文章 RSS"
 
   [links]
@@ -74,26 +52,26 @@
   [meta]
     other = "其它"
 
-  [tagszero]
+  [tagsNone]
     other = "没有标签"
 
-  [search]
+  [Search]
     other = "搜索"
-  [search-keyword]
+  [Search_keyword]
     other = "哈哈"
-  [search-results]
+  [Search_results]
     other = "的结果"
 # END: Theme
 
 # BGN: Copyright
-  [copyright-author]
+  [Copyright_author]
     other = "原文作者："
-  [copyright-link]
+  [Copyright_link]
     other = "原文链接："
-  [copyright-license]
+  [Copyright_license]
     other = "版权声明："
-  [copyright-license-01]
+  [Copyright_license_workUnder]
     other = "本作品采用"
-  [copyright-license-02]
+  [Copyright_license_note]
     other = "进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。"
 # END: Copyright

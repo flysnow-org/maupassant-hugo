@@ -6,7 +6,7 @@
             <span>{{ .Count }}</span>
         {{ end }}
         <span class="keyword">{{ .Data.Term }}</span>
-        {{ i18n "articles" }}
+        {{ i18n "Articles" }}
     </h3>
     {{ else if eq .Data.Singular "tag" }}
     <h3 class="archive-title">
@@ -14,7 +14,7 @@
         <span>{{ .Count }}</span>
         {{ end }}
         <span class="keyword">{{ .Data.Term }}</span>
-        {{ i18n "articles" }}
+        {{ i18n "Articles" }}
     </h3>
     {{ end }}
 
@@ -28,7 +28,7 @@
         {{ partial "post-meta.html" . }}
         <div class="post-content">
             {{ .Summary }}……
-            <p class="readmore"><a href="{{ .Permalink }}" target="_blank">{{ i18n "readmore" }}</a></p>
+            <p class="readmore"><a href="{{ .Permalink }}" target="_blank">{{ i18n "continueReading" }}</a></p>
         </div>
     </article>
     {{ end }}

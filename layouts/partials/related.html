@@ -1,7 +1,7 @@
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
 <div class="post-archive">
-    <h2>{{ i18n "articles-related" }}</h2>
+    <h2>{{ i18n "Articles_related" }}</h2>
     <ul class="listing">
         {{ range . }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>

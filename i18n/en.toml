@@ -1,32 +1,10 @@
 # Lang: English (generic)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# BGN: Date and Time Formats
-  [datetimeformat]
+# BGN: Date and Time Format
+  [Datetime_format]
     other = "2006-01-02"
-  [datetimelongtzd]
-    other = "2006-01-02 15:04:05 Z07:00"
-  [datetimelongtzn]
-    other = "2006-01-02 15:04:05 MST"
-  [datetimetzd]
-    other = "2006-01-02 15:04 Z07:00"
-  [datetimetzn]
-    other = "2006-01-02 15:04 MST"
-  [datetimeonly]
-    other = "2006-01-02 15:04"
-  [dateonly]
-    other = "2006-01-02"
-  [timelongtzd]
-    other = "15:04:05 Z07:00"
-  [timelongtzn]
-    other = "15:04:05 MST"
-  [timetzd]
-    other = "15:04 Z07:00"
-  [timetzn]
-    other = "15:04 MST"
-  [timeonly]
-    other = "15:04"
-# END: Date and Time Formats
+# END: Date and Time Format
 
 # BGN: Base
   [home]
@@ -39,8 +17,8 @@
     one = "Tag"
     other = "Tags"
 
-  [readmore]
-    other = "Read more"
+  [continueReading]
+    other = "Continue reading"
 
   [next]
     other = "Next"
@@ -55,17 +33,17 @@
   [ads]
     other = "Ads"
 
-  [articles]
+  [Articles]
     other = "articles"
-  [articles-latest]
+  [Articles_latest]
     other = "Latest articles"
-  [articles-related]
+  [Articles_related]
     other = "See Also"
 
   [busuanzi]
     other = "reads"
 
-  [feed-rss]
+  [Feed_rss]
     other = "RSS"
 
   [links]
@@ -74,26 +52,26 @@
   [meta]
     other = "Meta"
 
-  [tagszero]
+  [tagsNone]
     other = "No tags"
 
-  [search]
+  [Search]
     other = "Search: "
-  [search-keyword]
+  [Search_keyword]
     other = "Keyword"
-  [search-results]
+  [Search_results]
     other = "results"
 # END: Theme
 
 # BGN: Copyright
-  [copyright-author]
+  [Copyright_author]
     other = "Author: "
-  [copyright-link]
+  [Copyright_link]
     other = "Link: "
-  [copyright-license]
+  [Copyright_license]
     other = "License: "
-  [copyright-license-01]
+  [Copyright_license_workUnder]
     other = "This work is under a "
-  [copyright-license-02]
+  [Copyright_license_note]
     other = "Kindly fulfill the requirements of the aforementioned License when adapting or creating a derivative of this work."
 # END: Copyright
