@@ -72,6 +72,11 @@ disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要�
   enable = false
   placeholder = "说点什么吧..."
   serverURL = "Your waline serverURL" #换成你的serverURL
+## 配置 remark42 评论系统,教程参考 https://remark42.com/docs/getting-started/installation/
+[params.remark42]
+  enable = false
+  RemarkURL = ""
+  SiteId = "" 
 ## 开启版权声明，协议名字和链接都可以换
 [params.cc]
     name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
