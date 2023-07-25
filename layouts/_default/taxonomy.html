@@ -2,17 +2,13 @@
 <div class="res-cons">
     {{ if eq .Data.Singular "category" }}
     <h3 class="archive-title">
-        {{ range .Site.Taxonomies.categories.ByCount }}
-            <span>{{ .Count }}</span>
-        {{ end }}
+        分类
         <span class="keyword">{{ .Data.Term }}</span>
         {{ i18n "Articles" }}
     </h3>
     {{ else if eq .Data.Singular "tag" }}
     <h3 class="archive-title">
-        {{ range .Site.Taxonomies.tags.ByCount }}
-        <span>{{ .Count }}</span>
-        {{ end }}
+        包含标签
         <span class="keyword">{{ .Data.Term }}</span>
         {{ i18n "Articles" }}
     </h3>
