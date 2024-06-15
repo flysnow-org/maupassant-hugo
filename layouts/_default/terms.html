@@ -1,9 +1,9 @@
 {{ define "content"}}
 <header>
     {{ if eq .Data.Singular "category" }}
-    <h1>共有{{ len .Data.Terms }}个分类</h1>
+    <h1>{{ i18n "categories" }}: {{ len .Data.Terms }}</h1>
     {{ else if eq .Data.Singular "tag" }}
-    <h1>共有{{ len .Data.Terms }}个标签</h1>
+    <h1>{{ i18n "tags" }}: {{ len .Data.Terms }}</h1>
     {{ end }}
 </header>
 <div class="post-archive">

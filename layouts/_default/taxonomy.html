@@ -2,13 +2,13 @@
 <div class="res-cons">
     {{ if eq .Data.Singular "category" }}
     <h3 class="archive-title">
-        分类
+        {{ i18n "categories" }}
         <span class="keyword">{{ .Data.Term }}</span>
         {{ i18n "Articles" }}
     </h3>
     {{ else if eq .Data.Singular "tag" }}
     <h3 class="archive-title">
-        包含标签
+        {{ i18n "tags" }}
         <span class="keyword">{{ .Data.Term }}</span>
         {{ i18n "Articles" }}
     </h3>

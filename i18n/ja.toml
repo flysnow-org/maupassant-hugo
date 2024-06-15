@@ -75,3 +75,10 @@
   [Copyright_license_note]
     other = "本作業のデリバティブを適用または作成する場合は、上記のライセンスの要件を満たしてください。"
 # END: Copyright
+
+# BGN: Page 404
+  [Page404_button]
+    other = "ホームページ"
+  [Page404_message]
+    other = "ページが見つかりません"
+# END: Page 404

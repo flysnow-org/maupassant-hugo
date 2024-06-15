@@ -75,3 +75,10 @@
   [Copyright_license_note]
     other = "Kindly fulfill the requirements of the aforementioned License when adapting or creating a derivative of this work."
 # END: Copyright
+
+# BGN: Page 404
+  [Page404_button]
+    other = "Homepage"
+  [Page404_message]
+    other = "Page Not Found"
+# END: Page 404

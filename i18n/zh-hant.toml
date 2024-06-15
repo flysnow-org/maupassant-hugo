@@ -75,3 +75,11 @@
   [Copyright_license_note]
     other = "進行許可，非商業轉載請註明出處（作者，原文鏈接），商業轉載請聯繫作者獲得授權。"
 # END: Copyright
+
+# BGN: Page 404
+  [Page404_button]
+    other = "首頁"
+  [Page404_message]
+    other = "找不到網頁"
+# END: Page 404
+
