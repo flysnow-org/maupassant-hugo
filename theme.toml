@@ -10,7 +10,7 @@ description = "Maupassant 最初是由Cho大神为Typecho平台设计开发的�
 homepage = "https://github.com/pagecho/maupassant"
 tags = ["maupassant"]
 features = ["Tag","Category","Menu","Recent Post","Archives"]
-min_version = "0.30"
+min_version = "0.110.0"
 
 [author]
   name = "飞雪无情"
