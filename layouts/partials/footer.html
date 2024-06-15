@@ -130,11 +130,7 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='{{ "js/totop.js?v=0.0.0" | relURL }}' async=""></script>
-{{- if hasPrefix .Site.GoogleAnalytics "UA-" -}}
-    {{ template "_internal/google_analytics_async.html" . }}
-{{- else if hasPrefix .Site.GoogleAnalytics "G-" -}}
-    {{ template "_internal/google_analytics.html" . }}
-{{- end -}}
+{{ template "_internal/google_analytics.html" . }}
 
 {{ partial "copy_button" . }}
 
