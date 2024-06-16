@@ -1,20 +1,26 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-# fork https://github.com/JokerQyou/maupassant-hugo
+# Original author: Cho (https://github.com/pagecho/maupassant)
+# Adapted for Hugo by: JokerQyou (https://github.com/JokerQyou/maupassant-hugo)
+# Forked and improved by Flysnow-org (https://github.com/flysnow-org/maupassant-hugo)
+# Forked, "Maupassant World Hugo" is an internatioanalized and improved version by bryndin (https://github.com/bryndin/maupassant-hugo)
 
-name = "Maupassant Hugo"
+name = "Maupassant World Hugo"
 license = "MIT"
-licenselink = ""
-description = "Maupassant 最初是由Cho大神为Typecho平台设计开发的一套响应式模板，简洁、大气，大道至简。"
-homepage = "https://github.com/pagecho/maupassant"
-tags = ["maupassant"]
-features = ["Tag","Category","Menu","Recent Post","Archives"]
+licenselink = "https://github.com/bryndin/maupassant-hugo/blob/master/LICENSE.md"
+description = "Internationalized version of Maupassant Theme. The template was originally designed by Cho (pagecho)."
+homepage = "https://github.com/bryndin/maupassant-hugo"
+tags = ["blog", "simple", "responsive", "minimal", "personal", "light", "multilingual"]
+features = ["Search"]
 min_version = "0.110.0"
 
-[author]
-  name = "飞雪无情"
-  homepage = "https://www.flysnow.org"
+# If the theme has multiple authors
+authors = [
+  {name = "bryndin", homepage = "https://github.com/bryndin/maupassant-hugo"},
+  {name = "flysnow-org", homepage = "https://github.com/flysnow-org/maupassant-hugo"},
+  {name = "JokerQyou", homepage = "https://github.com/JokerQyou/maupassant-hugo"}
+]
 
 [originauthor]
   name = "Joker Qyou"
@@ -23,6 +29,6 @@ min_version = "0.110.0"
 
 # If porting an existing theme
 [original]
-  name = "pagecho"
-  homepage = "https://chopstack.com/"
-  repo = "https://github.com/pagecho/maupassant"
+    author = "pagecho"
+    homepage = "https://github.com/pagecho"
+    repo = "https://github.com/pagecho/maupassant"
