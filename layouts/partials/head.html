@@ -33,7 +33,7 @@
         {{ if .Params.author -}}
     <meta name="author" content="{{ .Params.author }}">
         {{ else }}
-    <meta name="author" content="{{ .Site.Author.name }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
         {{- end }}
     {{- end }}
     <meta property="og:url" content="{{ .Permalink }}">

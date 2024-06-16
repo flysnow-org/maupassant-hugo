@@ -1,7 +1,7 @@
 {{ if and (isset .Site.Params "cc")  (in (slice "post" "posts") .Type) }}
 <div class="post-archive">
     <ul class="post-copyright">
-        <li><strong>{{ i18n "Copyright_author" }}</strong><a rel="author" href="{{ .Site.BaseURL}}">{{ if isset .Site.Author "name" }}{{.Site.Author.name}}{{ else }}{{.Site.Title}}{{ end }}</a></li>
+        <li><strong>{{ i18n "Copyright_author" }}</strong><a rel="author" href="{{ .Site.BaseURL}}">{{ if isset .Site.Params "author" }}{{.Site.Params.author}}{{ else }}{{.Site.Title}}{{ end }}</a></li>
         <li style="word-break:break-all"><strong>{{ i18n "Copyright_link" }}</strong><a href="{{ .Permalink}}">{{ .Permalink}}</a></li>
         <li><strong>{{ i18n "Copyright_license" }}</strong>{{ i18n "Copyright_license_workUnder" }}<a rel="license" href="{{.Site.Params.cc.link}}">{{.Site.Params.cc.name}}</a>. {{ i18n "Copyright_license_note" }}</li>
     </ul>

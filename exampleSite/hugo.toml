@@ -14,9 +14,6 @@ summaryLength = 140
 
 disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要和utteranc同时开启
 
-[author]
-  name = "飞雪无情"
-
 [params]
   author = "飞雪无情"
   subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
