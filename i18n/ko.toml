@@ -1,11 +1,11 @@
 # Lang: Korean (South)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-# BGN: Date and Time Format
+
+##### Date and Time Format ###################################################
 [Datetime_format]
 other = "2006년 01월 02일"
 
-# END: Date and Time Format
-# BGN: Base
+##### Base ###################################################################
 [home]
 other = "집이에요"
 
@@ -29,8 +29,7 @@ other = "이전의"
 [toc]
 other = "목차."
 
-# END: Base
-# BGN: Theme
+##### Theme ##################################################################
 [ads]
 other = "광고"
 
@@ -67,8 +66,7 @@ other = "핵심어"
 [Search_results]
 other = "결과."
 
-# END: Theme
-# BGN: Copyright
+##### Copyright ##############################################################
 [Copyright_author]
 other = "작가: "
 
@@ -84,11 +82,10 @@ other = "이 작업은 아래에 있습니다."
 [Copyright_license_note]
 other = "이 작업의 파생 모델을 수정하거나 작성할 때 앞서 언급한 라이센스의 요구 사항을 충족하십시오."
 
-# END: Copyright
-# BGN: Page 404
+##### Page 404 ###############################################################
 [Page404_button]
 other = "홈페이지"
 
 [Page404_message]
 other = "페이지를 찾을 수 없음"
-# END: Page 404
+##############################################################################

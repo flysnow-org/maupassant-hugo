@@ -1,11 +1,11 @@
-# Lang: Simplified Chinese (China)
+# Lang: Traditional Chinese (China)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-# BGN: Date and Time Format
+
+##### Date and Time Format ###################################################
 [Datetime_format]
 other = "2006年1月2日"
 
-# END: Date and Time Format
-# BGN: Base
+##### Base ###################################################################
 [home]
 other = "首頁"
 
@@ -29,8 +29,7 @@ other = "上一頁"
 [toc]
 other = "文章目錄"
 
-# END: Base
-# BGN: Theme
+##### Theme ##################################################################
 [ads]
 other = "福利派送"
 
@@ -67,8 +66,7 @@ other = "哈哈"
 [Search_results]
 other = "的結果"
 
-# END: Theme
-# BGN: Copyright
+##### Copyright ##############################################################
 [Copyright_author]
 other = "原文作者："
 
@@ -84,11 +82,10 @@ other = "本作品採用"
 [Copyright_license_note]
 other = "進行許可，非商業轉載請註明出處（作者，原文鏈接），商業轉載請聯繫作者獲得授權。"
 
-# END: Copyright
-# BGN: Page 404
+##### Page 404 ###############################################################
 [Page404_button]
 other = "首頁"
 
 [Page404_message]
 other = "找不到網頁"
-# END: Page 404
+##############################################################################

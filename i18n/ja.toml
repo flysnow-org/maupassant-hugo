@@ -1,11 +1,11 @@
 # Lang: Japanese
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-# BGN: Date and Time Format
+
+##### Date and Time Format ###################################################
 [Datetime_format]
 other = "2006年1月2日"
 
-# END: Date and Time Format
-# BGN: Base
+##### Base ###################################################################
 [home]
 other = "自宅"
 
@@ -29,8 +29,7 @@ other = "前の"
 [toc]
 other = "目次"
 
-# END: Base
-# BGN: Theme
+##### Theme ##################################################################
 [ads]
 other = "広告です"
 
@@ -67,8 +66,7 @@ other = "キーワード"
 [Search_results]
 other = "検索結果"
 
-# END: Theme
-# BGN: Copyright
+##### Copyright ##############################################################
 [Copyright_author]
 other = "作成者:"
 
@@ -84,11 +82,10 @@ other = "この作業は、次の条件の下にあります。"
 [Copyright_license_note]
 other = "本作業のデリバティブを適用または作成する場合は、上記のライセンスの要件を満たしてください。"
 
-# END: Copyright
-# BGN: Page 404
+##### Page 404 ###############################################################
 [Page404_button]
 other = "ホームページ"
 
 [Page404_message]
 other = "ページが見つかりません"
-# END: Page 404
+##############################################################################
