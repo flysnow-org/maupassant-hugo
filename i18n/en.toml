@@ -1,84 +1,94 @@
 # Lang: English (generic)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-
 # BGN: Date and Time Format
-  [Datetime_format]
-    other = "2006-01-02"
+[Datetime_format]
+other = "2006-01-02"
+
 # END: Date and Time Format
-
 # BGN: Base
-  [home]
-    other = "Home"
+[home]
+other = "Home"
 
-  [categories]
-    one = "Category"
-    other = "Categories"
-  [tags]
-    one = "Tag"
-    other = "Tags"
+[categories]
+one = "Category"
+other = "Categories"
 
-  [continueReading]
-    other = "Continue reading"
+[tags]
+one = "Tag"
+other = "Tags"
 
-  [next]
-    other = "Next"
-  [previous]
-    other = "Previous"
+[continueReading]
+other = "Continue reading"
 
-  [toc]
-    other = "Table of Contents"
+[next]
+other = "Next"
+
+[previous]
+other = "Previous"
+
+[toc]
+other = "Table of Contents"
+
 # END: Base
-
 # BGN: Theme
-  [ads]
-    other = "Ads"
+[ads]
+other = "Ads"
 
-  [Articles]
-    other = "articles"
-  [Articles_latest]
-    other = "Latest articles"
-  [Articles_related]
-    other = "See Also"
+[Articles]
+other = "articles"
 
-  [busuanzi]
-    other = "reads"
+[Articles_latest]
+other = "Latest articles"
 
-  [Feed_rss]
-    other = "RSS"
+[Articles_related]
+other = "See Also"
 
-  [links]
-    other = "Links"
+[busuanzi]
+other = "reads"
 
-  [meta]
-    other = "Meta"
+[Feed_rss]
+other = "RSS"
 
-  [tagsNone]
-    other = "No tags"
+[links]
+other = "Links"
 
-  [Search]
-    other = "Search: "
-  [Search_keyword]
-    other = "Keyword"
-  [Search_results]
-    other = "results"
+[meta]
+other = "Meta"
+
+[tagsNone]
+other = "No tags"
+
+[Search]
+other = "Search: "
+
+[Search_keyword]
+other = "Keyword"
+
+[Search_results]
+other = "results"
+
 # END: Theme
-
 # BGN: Copyright
-  [Copyright_author]
-    other = "Author: "
-  [Copyright_link]
-    other = "Link: "
-  [Copyright_license]
-    other = "License: "
-  [Copyright_license_workUnder]
-    other = "This work is under a "
-  [Copyright_license_note]
-    other = "Kindly fulfill the requirements of the aforementioned License when adapting or creating a derivative of this work."
-# END: Copyright
+[Copyright_author]
+other = "Author: "
 
+[Copyright_link]
+other = "Link: "
+
+[Copyright_license]
+other = "License: "
+
+[Copyright_license_workUnder]
+other = "This work is under a "
+
+[Copyright_license_note]
+other = "Kindly fulfill the requirements of the aforementioned License when adapting or creating a derivative of this work."
+
+# END: Copyright
 # BGN: Page 404
-  [Page404_button]
-    other = "Homepage"
-  [Page404_message]
-    other = "Page Not Found"
+[Page404_button]
+other = "Homepage"
+
+[Page404_message]
+other = "Page Not Found"
 # END: Page 404

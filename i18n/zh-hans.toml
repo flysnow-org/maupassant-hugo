@@ -1,85 +1,94 @@
 # Lang: Simplified Chinese (China)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-
 # BGN: Date and Time Format
-  [Datetime_format]
-    other = "2006年1月2日"
+[Datetime_format]
+other = "2006年1月2日"
+
 # END: Date and Time Format
-
 # BGN: Base
-  [home]
-    other = "首页"
+[home]
+other = "首页"
 
-  [categories]
-    one = "分类"
-    other = "分类"
-  [tags]
-    one = "标签"
-    other = "标签"
+[categories]
+one = "分类"
+other = "分类"
 
-  [continueReading]
-    other = "阅读全文"
+[tags]
+one = "标签"
+other = "标签"
 
-  [next]
-    other = "下一页"
-  [previous]
-    other = "上一页"
+[continueReading]
+other = "阅读全文"
 
-  [toc]
-    other = "文章目录"
+[next]
+other = "下一页"
+
+[previous]
+other = "上一页"
+
+[toc]
+other = "文章目录"
+
 # END: Base
-
 # BGN: Theme
-  [ads]
-    other = "福利派送"
+[ads]
+other = "福利派送"
 
-  [Articles]
-    other = "中的文章"
-  [Articles_latest]
-    other = "最近文章"
-  [Articles_related]
-    other = "相关文章"
+[Articles]
+other = "中的文章"
 
-  [busuanzi]
-    other = "阅读"
+[Articles_latest]
+other = "最近文章"
 
-  [Feed_rss]
-    other = "文章 RSS"
+[Articles_related]
+other = "相关文章"
 
-  [links]
-    other = "友情链接"
+[busuanzi]
+other = "阅读"
 
-  [meta]
-    other = "其它"
+[Feed_rss]
+other = "文章 RSS"
 
-  [tagsNone]
-    other = "没有标签"
+[links]
+other = "友情链接"
 
-  [Search]
-    other = "搜索"
-  [Search_keyword]
-    other = "哈哈"
-  [Search_results]
-    other = "的结果"
+[meta]
+other = "其它"
+
+[tagsNone]
+other = "没有标签"
+
+[Search]
+other = "搜索"
+
+[Search_keyword]
+other = "哈哈"
+
+[Search_results]
+other = "的结果"
+
 # END: Theme
-
 # BGN: Copyright
-  [Copyright_author]
-    other = "原文作者："
-  [Copyright_link]
-    other = "原文链接："
-  [Copyright_license]
-    other = "版权声明："
-  [Copyright_license_workUnder]
-    other = "本作品采用"
-  [Copyright_license_note]
-    other = "进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。"
+[Copyright_author]
+other = "原文作者："
+
+[Copyright_link]
+other = "原文链接："
+
+[Copyright_license]
+other = "版权声明："
+
+[Copyright_license_workUnder]
+other = "本作品采用"
+
+[Copyright_license_note]
+other = "进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。"
+
 # END: Copyright
-
 # BGN: Page 404
-  [Page404_button]
-    other = "主页"
-  [Page404_message]
-    other = "找不到网页"
-# END: Page 404
+[Page404_button]
+other = "主页"
 
+[Page404_message]
+other = "找不到网页"
+# END: Page 404

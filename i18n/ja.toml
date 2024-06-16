@@ -1,84 +1,94 @@
 # Lang: Japanese
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-
 # BGN: Date and Time Format
-  [Datetime_format]
-    other = "2006年1月2日"
+[Datetime_format]
+other = "2006年1月2日"
+
 # END: Date and Time Format
-
 # BGN: Base
-  [home]
-    other = "自宅"
+[home]
+other = "自宅"
 
-  [categories]
-    one = "カテゴリ"
-    other = "カテゴリ"
-  [tags]
-    one = "タグ"
-    other = "タグ"
+[categories]
+one = "カテゴリ"
+other = "カテゴリ"
 
-  [continueReading]
-    other = "詳細はこちら"
+[tags]
+one = "タグ"
+other = "タグ"
 
-  [next]
-    other = "次へ"
-  [previous]
-    other = "前の"
+[continueReading]
+other = "詳細はこちら"
 
-  [toc]
-    other = "目次"
+[next]
+other = "次へ"
+
+[previous]
+other = "前の"
+
+[toc]
+other = "目次"
+
 # END: Base
-
 # BGN: Theme
-  [ads]
-    other = "広告です"
+[ads]
+other = "広告です"
 
-  [Articles]
-    other = "記事です"
-  [Articles_latest]
-    other = "最新の記事です"
-  [Articles_related]
-    other = "関連記事です"
+[Articles]
+other = "記事です"
 
-  [busuanzi]
-    other = "読みます。"
+[Articles_latest]
+other = "最新の記事です"
 
-  [Feed_rss]
-    other = "RSSフィード"
+[Articles_related]
+other = "関連記事です"
 
-  [links]
-    other = "リンク"
+[busuanzi]
+other = "読みます。"
 
-  [meta]
-    other = "メタ"
+[Feed_rss]
+other = "RSSフィード"
 
-  [tagsNone]
-    other = "タグなし"
+[links]
+other = "リンク"
 
-  [Search]
-    other = "検索"
-  [Search_keyword]
-    other = "キーワード"
-  [Search_results]
-    other = "検索結果"
+[meta]
+other = "メタ"
+
+[tagsNone]
+other = "タグなし"
+
+[Search]
+other = "検索"
+
+[Search_keyword]
+other = "キーワード"
+
+[Search_results]
+other = "検索結果"
+
 # END: Theme
-
 # BGN: Copyright
-  [Copyright_author]
-    other = "作成者:"
-  [Copyright_link]
-    other = "リンク:"
-  [Copyright_license]
-    other = "ライセンス:"
-  [Copyright_license_workUnder]
-    other = "この作業は、次の条件の下にあります。"
-  [Copyright_license_note]
-    other = "本作業のデリバティブを適用または作成する場合は、上記のライセンスの要件を満たしてください。"
-# END: Copyright
+[Copyright_author]
+other = "作成者:"
 
+[Copyright_link]
+other = "リンク:"
+
+[Copyright_license]
+other = "ライセンス:"
+
+[Copyright_license_workUnder]
+other = "この作業は、次の条件の下にあります。"
+
+[Copyright_license_note]
+other = "本作業のデリバティブを適用または作成する場合は、上記のライセンスの要件を満たしてください。"
+
+# END: Copyright
 # BGN: Page 404
-  [Page404_button]
-    other = "ホームページ"
-  [Page404_message]
-    other = "ページが見つかりません"
+[Page404_button]
+other = "ホームページ"
+
+[Page404_message]
+other = "ページが見つかりません"
 # END: Page 404
