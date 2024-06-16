@@ -1,5 +1,5 @@
 baseURL = "https://www.flysnow.org"
-languageCode = "zh-CN"
+defaultContentLanguage = "en"
 title = "飞雪无情的博客"
 theme = "maupassant"
 googleAnalytics = ""  # UA-XXXXXXXX-X/G-XXXXXXXXXX
