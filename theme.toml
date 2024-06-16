@@ -10,10 +10,16 @@ name = "Maupassant World Hugo"
 license = "MIT"
 licenselink = "https://github.com/bryndin/maupassant-hugo/blob/master/LICENSE.md"
 description = "Internationalized version of Maupassant Theme. The template was originally designed by Cho (pagecho)."
+
+# The home page of the theme, where the source can be found.
 homepage = "https://github.com/bryndin/maupassant-hugo"
+
+# If you have a running demo of the theme.
+# TODO: add a demo site
+# demosite = "https://example.com"
+
 tags = ["blog", "simple", "responsive", "minimal", "personal", "light", "multilingual"]
 features = ["Search"]
-min_version = "0.110.0"
 
 # If the theme has multiple authors
 authors = [
