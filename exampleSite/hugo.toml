@@ -92,12 +92,12 @@ disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要�
 
   [[menu.main]]
     identifier = "archives"
-    name = "归档"
+    name = "menu_Archives"  # i18n key, see files in `i18n` folder
     url = "/archives/"
     weight = 3
 
   [[menu.main]]
     identifier = "about"
-    name = "关于"
+    name = "menu_About" # i18n key, see files in `i18n` folder
     url = "/about/"
     weight = 4

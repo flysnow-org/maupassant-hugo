@@ -66,6 +66,13 @@ other = "Keyword"
 [Search_results]
 other = "results"
 
+##### Menu ###################################################################
+[menu_Archives]
+other = "Archives"
+
+[menu_About]
+other = "About"
+
 ##### Copyright ##############################################################
 [Copyright_author]
 other = "Author: "

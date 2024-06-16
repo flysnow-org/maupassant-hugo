@@ -1,6 +1,5 @@
 # Lang: Traditional Chinese (China)
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-
 ##### Date and Time Format ###################################################
 [Datetime_format]
 other = "2006年1月2日"
@@ -65,6 +64,13 @@ other = "哈哈"
 
 [Search_results]
 other = "的結果"
+
+##### Menu ###################################################################
+[menu_Archives]
+other = "檔案"
+
+[menu_About]
+other = "關於"
 
 ##### Copyright ##############################################################
 [Copyright_author]
