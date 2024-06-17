@@ -86,22 +86,22 @@ summaryLength = 140
 
 ## 配置网站菜单
 
-[menu]
-
+# See https://gohugo.io/content-management/menus/#define-in-site-configuration
+[menus]
   [[menu.main]]
     identifier = "tools"
     name = "工具"
-    url = "/tools/"
+    pageRef = "/tools/"
     weight = 2
 
   [[menu.main]]
     identifier = "archives"
     name = "menu_Archives"  # i18n key, see files in `i18n` folder
-    url = "/archives/"
+    pageRef = "/archives/"  # keep the trainling slashes
     weight = 3
 
   [[menu.main]]
     identifier = "about"
     name = "menu_About" # i18n key, see files in `i18n` folder
-    url = "/about/"
+    pageRef = "/about/" # keep the trainling slashes
     weight = 4
