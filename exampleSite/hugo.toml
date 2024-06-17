@@ -1,15 +1,21 @@
-baseURL = "https://www.flysnow.org"
-defaultContentLanguage = "en"
-title = "飞雪无情的博客"
-theme = "maupassant"
+##### Default parameters #####################################################
 
-## 保持分类的原始名字（false会做转小写处理）
-preserveTaxonomyNames = true
-## 是否禁止URL Path转小写
-disablePathToLower = true
+# (required) The base URL of your site. This will be prepended to all relative URLs
+baseURL = 'https://www.flysnow.org'
+ # (required) Website title
+title = '飞雪无情的博客'
+# Theme name
+theme = 'maupassant'
 
-hasCJKLanguage = true
-summaryLength = 140
+# project's default language
+defaultContentLanguage = 'en'
+# Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
+# timeZone = "America/New_York"
+# post excerpt, content summary length for post list
+summaryLength = 140   # see https://gohugo.io/content-management/excerpts/
+hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
+
+##### Services ###############################################################
 
 [services]
 [services.googleAnalytics]
@@ -17,6 +23,8 @@ summaryLength = 140
 
 [services.disqus]
   shortname = '' # Disqus comments. See https://gohugo.io/templates/embedded/?search-input=disqusShortname#configure-disqus
+
+##### Site Params ############################################################
 
 [params]
   author = "飞雪无情"
@@ -78,13 +86,14 @@ summaryLength = 140
     name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
     link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
-## 配置代码高亮
+##### Markup settings ########################################################
+
 [markup]
   [markup.highlight]
     lineNos = true
     style = "github"
 
-## 配置网站菜单
+##### Menu ###################################################################
 
 # See https://gohugo.io/content-management/menus/#define-in-site-configuration
 [menus]
