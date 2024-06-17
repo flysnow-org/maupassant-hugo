@@ -15,7 +15,8 @@ summaryLength = 140
 [services.googleAnalytics]
   ID = '' # Google Analytics ID. See https://gohugo.io/templates/internal/#configure-google-analytics
 
-disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要和utteranc同时开启
+[services.disqus]
+  shortname = '' # Disqus comments. See https://gohugo.io/templates/embedded/?search-input=disqusShortname#configure-disqus
 
 [params]
   author = "飞雪无情"
