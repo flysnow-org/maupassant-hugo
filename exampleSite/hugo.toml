@@ -2,7 +2,6 @@ baseURL = "https://www.flysnow.org"
 defaultContentLanguage = "en"
 title = "飞雪无情的博客"
 theme = "maupassant"
-googleAnalytics = ""  # UA-XXXXXXXX-X/G-XXXXXXXXXX
 
 ## 保持分类的原始名字（false会做转小写处理）
 preserveTaxonomyNames = true
@@ -11,6 +10,10 @@ disablePathToLower = true
 
 hasCJKLanguage = true
 summaryLength = 140
+
+[services]
+[services.googleAnalytics]
+  ID = '' # Google Analytics ID. See https://gohugo.io/templates/internal/#configure-google-analytics
 
 disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要和utteranc同时开启
 
