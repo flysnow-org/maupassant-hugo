@@ -1,16 +1,17 @@
 ##### Default parameters #####################################################
 
 # (required) The base URL of your site. This will be prepended to all relative URLs
-baseURL = 'https://www.flysnow.org'
- # (required) Website title
-title = '飞雪无情的博客'
+baseURL = 'https://github.com/bryndin/maupassant-hugo/'
+# (required) Website title
+title = "Maupassant: A Hugo Blog Theme"
 # Theme name
 theme = 'maupassant'
 
 # project's default language
 defaultContentLanguage = 'en'
+languageCode = "en-us"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-# timeZone = "America/New_York"
+timeZone = "America/Los_Angeles"
 # post excerpt, content summary length for post list
 summaryLength = 140   # see https://gohugo.io/content-management/excerpts/
 hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
@@ -27,10 +28,10 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 ##### Site Params ############################################################
 
 [params]
-  author = "飞雪无情"
-  subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
-  keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
-  description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
+  author = "bryndin"
+  subtitle = "Elegant & simple blog theme inspired by Guy de Maupassant"
+  keywords = "maupassant, hugo, theme, free, open-source, blog, blogger, light, website, simple, minimal, responsive, SEO friendly, fast, demo, demosight, i18n, en, ja, ko, zh"
+  description = "Maupassant is a free and open-source Hugo theme designed for bloggers. It features a clean, minimal aesthetic inspired by the works of Guy de Maupassant, perfect for showcasing your writing."
   googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
 
   # Here you can put list of custom JS/CSS files you want to be loaded
@@ -50,23 +51,15 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 ### Latest Posts Widget
 [params.wLatestPosts]
   disable = false # Disables and hides the widget
-  limit = 5 # Maximum number of posts to show
-  type = "post" # Only show latest posts of this type. See https://gohugo.io/methods/page/type/
+  limit = 5 # Max number of entries to show
+  type = "posts" # Only show entries from this type. See https://gohugo.io/methods/page/type/
 
 ### Ads Widget.  Removing all entries disables the widget.
 # If `img` is not specified, the text in `title` will be used instead
 [[params.wAds]]
-  img = "https://img.alicdn.com/tfs/TB1_rYHo7P2gK0jSZPxXXacQpXa-690-388.jpg"
-  title = "【2019双12】ALL IN CLoud 低至1折"
-  url = "https://www.aliyun.com/minisite/goods?userCode=jdg9oj97&share_source=copy_link"
-[[params.wAds]]
-  img = "https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg"
-  title = "助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！"
-  url = "https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=14ff722692ac784fa8c3301c8c28d924&from=console"
-[[params.wAds]]
-  img = "https://img.alicdn.com/tfs/TB1hblJl7Y2gK0jSZFgXXc5OFXa-750-400.jpg"
-  title = "【渠道专享低折扣】11月特惠 限时2折"
-  url = "https://www.aliyun.com/acts/limit-buy?userCode=jdg9oj97"
+  img = "https://gohugo.io/images/hugo-logo-wide.svg"
+  title = "Hugo, framework for building websites"
+  url = "https://gohugo.io/"
 
 ### Categories Widget
 [params.wCategories]
@@ -78,14 +71,19 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 
 ### Links Widget.  Removing all entries disables the widget.
 [[params.wLinks]]
-  name = "飞雪无情的博客"
-  title = "飞雪无情的博客"
-  url = "https://www.flysnow.org/"
+  name = "Get Maupassant Theme"
+  title = "Download Maupassant Theme on GitHub"
+  url = "https://github.com/bryndin/maupassant-hugo/"
 
 [[params.wLinks]]
-  name = "Android Gradle权威指南"
-  title = "Android Gradle权威指南"
-  url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
+  name = "Visit my GitHub"
+  title = "My GitHub"
+  url = "https://github.com/bryndin"
+
+[[params.wLinks]]
+  name = "Learn Hugo"
+  title = "Hugo"
+  url = "https://gohugo.io/"
 
 ### Socials Widget
 [params.wSocials]
@@ -97,12 +95,12 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 # See https://gohugo.io/content-management/related/
 [params.relatedPosts]
   disable = false # Disables and hides the widget
-  limit = 5 # Max number of entries to display
-  type = "post" # Only show entries from this type. See https://gohugo.io/methods/page/type/
+  limit = 5 # Max number of entries to show
+  type = "posts" # Only show entries from this type. See https://gohugo.io/methods/page/type/
 
 ### Copyright statement for posts
 [params.cc]
-    name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
+    name = "Creative Commons Attribution-Noncommercial-NoDerivs 4.0 International License"
     link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
 
@@ -131,12 +129,6 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 
 # See https://gohugo.io/content-management/menus/#define-in-site-configuration
 [menus]
-  [[menu.main]]
-    identifier = "tools"
-    name = "工具"
-    pageRef = "/tools/"
-    weight = 2
-
   [[menu.main]]
     identifier = "archives"
     name = "menu_Archives"  # i18n key, see files in `i18n` folder
