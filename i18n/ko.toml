@@ -36,8 +36,8 @@ other = "광고"
 [Articles]
 other = "기사들"
 
-[Articles_latest]
-other = "최신 기사입니다."
+[latest_posts]
+other = "최근 게시물"
 
 [related_posts]
 other = "관련 게시물"

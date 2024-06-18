@@ -36,8 +36,8 @@ other = "福利派送"
 [Articles]
 other = "中的文章"
 
-[Articles_latest]
-other = "最近文章"
+[latest_posts]
+other = "最新帖子"
 
 [related_posts]
 other = "相关文章"

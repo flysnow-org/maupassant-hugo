@@ -48,7 +48,11 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   disable = false # Disables and hides the widget
   localSearch = true # Use local search (true), or Google Search over your domain (false)
 
-### Latest Articles Widget
+### Latest Posts Widget
+[params.wLatestPosts]
+  disable = false # Disables and hides the widget
+  limit = 5 # Maximum number of posts to show
+  type = "post" # Only show latest posts of this type. See https://gohugo.io/methods/page/type/
 
 ### Ads Widget.  Removing all entries disables the widget.
 [[params.ads]]

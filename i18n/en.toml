@@ -36,8 +36,8 @@ other = "Ads"
 [Articles]
 other = "articles"
 
-[Articles_latest]
-other = "Latest articles"
+[latest_posts]
+other = "Latest posts"
 
 [related_posts]
 other = "Related posts"

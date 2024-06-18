@@ -1,5 +1,5 @@
 {{ if not .Site.Params.relatedPosts.disable }}
-{{ $related := .Site.RegularPages.Related . | first .Site.Params.relatedPosts.length }}
+{{ $related := .Site.RegularPages.Related . | first .Site.Params.relatedPosts.Limit }}
 {{ $relatedPosts := where $related "Type" .Site.Params.relatedPosts.type }}
 {{ with $relatedPosts }}
 <div class="post-archive">
