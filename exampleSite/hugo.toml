@@ -31,52 +31,72 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
   keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
   description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
-  busuanzi = true #启用不算子网页统计
+  busuanzi = true # https://github.com/soxft/busuanzi website statistics analyzer
   googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
 
-  # 这里我存放在了主题的static文件夹里，根目录的似乎也可以
+  # Here you can put list of custom JS/CSS files you want to be loaded
   customCSS = []
-  # if ['custom.css'], load '/static/css/custom.css' file
   customJS = []
-  # if ['custom.js'], load '/static/js/custom.js' file
 
-  # 全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能
-  toc = true  # 是否开启目录
+  # Global table of contents switch. For non-blog posts pages, consider turning it off in `front matter`
+  toc = true
 
+##### Side Column Widgets ####################################################
+
+### Site Search Widget
 [params.search]
   disable = false # Disables and hides the widget
   localSearch = true # Use local search (true), or Google Search over your domain (false)
 
+### Latest Articles Widget
+
+### Ads Widget.  Removing all entries disables the widget.
+[[params.ads]]
+  img = "https://img.alicdn.com/tfs/TB1_rYHo7P2gK0jSZPxXXacQpXa-690-388.jpg"
+  title = "【2019双12】ALL IN CLoud 低至1折"
+  url = "https://www.aliyun.com/minisite/goods?userCode=jdg9oj97&share_source=copy_link"
+[[params.ads]]
+  img = "https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg"
+  title = "助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！"
+  url = "https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=14ff722692ac784fa8c3301c8c28d924&from=console"
+[[params.ads]]
+  img = "https://img.alicdn.com/tfs/TB1hblJl7Y2gK0jSZFgXXc5OFXa-750-400.jpg"
+  title = "【渠道专享低折扣】11月特惠 限时2折"
+  url = "https://www.aliyun.com/acts/limit-buy?userCode=jdg9oj97"
+
+### Categories Widget
+
+### Tags Widget
+
+### Links Widget.  Removing all entries disables the widget.
+[[params.links]]
+  name = "飞雪无情的博客"
+  title = "飞雪无情的博客"
+  url = "https://www.flysnow.org/"
+
+[[params.links]]
+  name = "Android Gradle权威指南"
+  title = "Android Gradle权威指南"
+  url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
+
+### Meta Widget
+
+##### Page Features ##########################################################
+
+### Related Posts.  At the bottom of the post page, show links to related posts.
+# See https://gohugo.io/content-management/related/
 [params.relatedPosts]
   disable = false # Disables and hides the widget
   limit = 5 # Max number of entries to display
   type = "post" # Only show entries from this type. See https://gohugo.io/methods/page/type/
 
-## 友情链接，可以多个
+### Copyright statement for posts
+[params.cc]
+    name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
+    link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
-[[params.links]]
-  title = "飞雪无情的博客"
-  name = "飞雪无情的博客"
-  url = "https://www.flysnow.org/"
 
-[[params.links]]
-  title = "Android Gradle权威指南"
-  name = "Android Gradle权威指南"
-  url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
-
-## 侧边栏广告位
-[[params.ads]]
-  title = "【2019双12】ALL IN CLoud 低至1折"
-  url = "https://www.aliyun.com/minisite/goods?userCode=jdg9oj97&share_source=copy_link"
-  img = "https://img.alicdn.com/tfs/TB1_rYHo7P2gK0jSZPxXXacQpXa-690-388.jpg"
-[[params.ads]]
-  title = "助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！"
-  url = "https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=14ff722692ac784fa8c3301c8c28d924&from=console"
-  img = "https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg"
-[[params.ads]]
-  title = "【渠道专享低折扣】11月特惠 限时2折"
-  url = "https://www.aliyun.com/acts/limit-buy?userCode=jdg9oj97"
-  img = "https://img.alicdn.com/tfs/TB1hblJl7Y2gK0jSZFgXXc5OFXa-750-400.jpg"
+##### Alternative comments services ##########################################
 
 ## utteranc, see https://utteranc.es/
 [params.utteranc]
@@ -84,21 +104,17 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   repo = "your github repo" # Change to your repository
   issueTerm = "pathname"
   theme = "github-light"
+
 ## waline, see https://waline.js.org/
 [params.waline]
   enable = false
   placeholder = ""  # Default text of comment box
   serverURL = "Your waline serverURL" # Change to your serverURL
-## 开启版权声明，协议名字和链接都可以换
-[params.cc]
-    name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
-    link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
 ##### Markup settings ########################################################
 
 [markup]
   [markup.highlight]
-    lineNos = true
     style = "github"
 
 ##### Menu ###################################################################
