@@ -1,11 +1,14 @@
-{{ $related := .Site.RegularPages.Related . | first 5 }}
-{{ with $related }}
+{{ if not .Site.Params.relatedPosts.disable }}
+{{ $related := .Site.RegularPages.Related . | first .Site.Params.relatedPosts.length }}
+{{ $relatedPosts := where $related "Type" .Site.Params.relatedPosts.type }}
+{{ with $relatedPosts }}
 <div class="post-archive">
-    <h2>{{ i18n "Articles_related" }}</h2>
+    <h2>{{ i18n "related_posts" }}</h2>
     <ul class="listing">
         {{ range . }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
     </ul>
 </div>
+{{ end }}
 {{ end }}

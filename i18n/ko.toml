@@ -39,8 +39,8 @@ other = "기사들"
 [Articles_latest]
 other = "최신 기사입니다."
 
-[Articles_related]
-other = "관련기사입니다"
+[related_posts]
+other = "관련 게시물"
 
 [busuanzi]
 other = "읽습니다."

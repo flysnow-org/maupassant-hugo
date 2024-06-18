@@ -39,8 +39,8 @@ other = "記事です"
 [Articles_latest]
 other = "最新の記事です"
 
-[Articles_related]
-other = "関連記事です"
+[related_posts]
+other = "関連記事"
 
 [busuanzi]
 other = "読みます。"

@@ -47,6 +47,11 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   disable = false # Disables and hides the widget
   localSearch = true # Use local search (true), or Google Search over your domain (false)
 
+[params.relatedPosts]
+  disable = false # Disables and hides the widget
+  limit = 5 # Max number of entries to display
+  type = "post" # Only show entries from this type. See https://gohugo.io/methods/page/type/
+
 ## 友情链接，可以多个
 
 [[params.links]]

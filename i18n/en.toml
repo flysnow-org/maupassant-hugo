@@ -39,8 +39,8 @@ other = "articles"
 [Articles_latest]
 other = "Latest articles"
 
-[Articles_related]
-other = "See Also"
+[related_posts]
+other = "Related posts"
 
 [busuanzi]
 other = "reads"
