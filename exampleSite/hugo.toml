@@ -70,17 +70,17 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   url = "https://www.aliyun.com/acts/limit-buy?userCode=jdg9oj97"
   img = "https://img.alicdn.com/tfs/TB1hblJl7Y2gK0jSZFgXXc5OFXa-750-400.jpg"
 
-## 配置 utteranc评论,教程参考 https://utteranc.es/
+## utteranc, see https://utteranc.es/
 [params.utteranc]
-  enable = true
-  repo = "your github repo" ##换成自己得
+  enable = false
+  repo = "your github repo" # Change to your repository
   issueTerm = "pathname"
   theme = "github-light"
-## 配置 waline 评论系统,教程参考 https://waline.js.org/
+## waline, see https://waline.js.org/
 [params.waline]
   enable = false
-  placeholder = "说点什么吧..."
-  serverURL = "Your waline serverURL" #换成你的serverURL
+  placeholder = ""  # Default text of comment box
+  serverURL = "Your waline serverURL" # Change to your serverURL
 ## 开启版权声明，协议名字和链接都可以换
 [params.cc]
     name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
