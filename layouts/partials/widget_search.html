@@ -1,0 +1,10 @@
+{{ if not .Site.Params.Search.disable }}
+<section class="widget">
+      <form id="search" action='{{if .Site.Params.Search.localSearch }}{{ "search"| absURL}}{{else}}//www.google.com/search{{end}}' method="get" accept-charset="utf-8" target="_blank">
+            {{/** the keywords **/}}
+            <input type="text" name="q" maxlength="20" placeholder="Search">
+            <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}">
+            <button type="submit" class="submit icon-search"></button>
+      </form>
+</section>
+{{ end -}}

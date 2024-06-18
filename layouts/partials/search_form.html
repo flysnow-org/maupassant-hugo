@@ -1,6 +1,0 @@
-<form id="search" action='{{if .Site.Params.localSearch }}{{ "search"| absURL}}{{else}}//www.google.com/search{{end}}' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
-      {{/** the keywords **/}}
-      <input type="text" name="q" maxlength="20" placeholder="Search">
-      <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}">
-      <button type="submit" class="submit icon-search"></button>
-</form>
