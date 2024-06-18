@@ -9,14 +9,14 @@
 <div class="post-archive">
     {{ range .Data.Terms.ByCount }}
     <h2>
-        <a href="{{ path.Join $.Data.Plural .Term | urlize | absLangURL }}" target="_blank">{{ .Term }}</a>
+        <a href="{{ path.Join $.Data.Plural .Term | urlize | absLangURL }}">{{ .Term }}</a>
         ({{ .Count }})
     </h2>
     <ul class="listing">
         {{ range .Pages }}
         <li>
             <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-            <a href="{{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
         </li>
         {{ end }}
     </ul>

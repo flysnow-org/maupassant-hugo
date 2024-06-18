@@ -8,7 +8,7 @@
 <div class="post-meta meta-category">
   <span>&nbsp;|</span>
   {{ range . }}
-    <a href='{{ "categories/" | relURL }}{{ . | urlize }}' target="_blank">{{ . }}</a>
+    <a href='{{ "categories/" | relURL }}{{ . | urlize }}'>{{ . }}</a>
   {{ end }}
 </div>
 {{ end }}

@@ -32,7 +32,7 @@
             {{ if and (isset .Params "tags") .Params.tags }}
             <ul class="clearfix">
                 {{ range .Params.Tags }}
-                <li><a href='{{ "tags/" | relURL }}{{ . | urlize }}' target="_blank">{{ . }}</a></li>
+                <li><a href='{{ "tags/" | relURL }}{{ . | urlize }}'>{{ . }}</a></li>
                 {{ end }}
             </ul>
             {{ else }}

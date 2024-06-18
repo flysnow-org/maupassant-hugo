@@ -2,7 +2,7 @@
     <div>
         &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }} By {{ .Site.Params.author }}</a>
         {{ if .Site.Params.beian }}
-        | <a rel="nofollow" target="_blank" href="http://beian.miit.gov.cn/">{{.Site.Params.beian}}</a>
+        | <a rel="nofollow" href="http://beian.miit.gov.cn/">{{.Site.Params.beian}}</a>
         {{ end }}
     </div>
 </footer>

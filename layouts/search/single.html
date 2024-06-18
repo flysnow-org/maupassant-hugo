@@ -10,13 +10,13 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="link" target="_blank">title</a>
+                <a href="link">title</a>
             </h1>
         </header>
         {{ if not .PublishDate.IsZero }}<time datetime="{{ .PublishDate.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="post-meta meta-date dt-published">{{ time.Format $datetime_format .PublishDate }}</time>{{ end }}
         <div class="post-content">
             overview……
-            <p class="readmore"><a href="link" target="_blank">{{ i18n "continueReading" }}</a></p>
+            <p class="readmore"><a href="link">{{ i18n "continueReading" }}</a></p>
         </div>
     </article>
 
@@ -52,10 +52,10 @@
                     var title = item.find("title").text();
                     if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
                         var url = item.find("link").text();
-                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `" target="_blank">` + title + `</a></h1></header>`;
+                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `">` + title + `</a></h1></header>`;
                         var pubDate = new Date(item.find("pubDate").text())
                         searchItem += `<time class="post-meta meta-date">` + pubDate.getFullYear() + `-` + (pubDate.getMonth() + 1) + `-` + pubDate.getDate() + `</time>`;
-                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `" target="_blank">` + {{ i18n "continueReading" }} + `</a></p></div></article>`;
+                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `">` + {{ i18n "continueReading" }} + `</a></p></div></article>`;
 
                         $("div.res-cons").append(searchItem);
                     }
