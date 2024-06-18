@@ -58,13 +58,13 @@ other = "Meta"
 other = "No tags"
 
 [Search]
-other = "Search: "
+other = "Searching: "
 
 [Search_keyword]
 other = "Keyword"
 
 [Search_results]
-other = "results"
+other = ""
 
 ##### Menu ###################################################################
 [menu_Archives]
