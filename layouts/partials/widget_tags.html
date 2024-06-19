@@ -1,0 +1,10 @@
+{{ if not .Site.Params.wTags.disable }}
+<section class="widget">
+    <h3 class="widget-title"><a href='{{ "tags/" | relURL }}'>{{ i18n "tags" }}</a></h3>
+    <div class="tagcloud">
+        {{ range .Site.Taxonomies.tags }}
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        {{ end }}
+    </div>
+</section>
+{{ end -}}

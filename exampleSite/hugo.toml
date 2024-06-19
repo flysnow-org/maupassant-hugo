@@ -74,6 +74,8 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   disable = false # Disables and hides the widget
   
 ### Tags Widget
+[params.wTags]
+  disable = false # Disables and hides the widget
 
 ### Links Widget.  Removing all entries disables the widget.
 [[params.links]]
