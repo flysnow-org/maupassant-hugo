@@ -141,17 +141,17 @@ type: "search"
 #### 友情链接
 
 ```toml
-[[params.links]]
+[[params.wLinks]]
   title = "Android Gradle权威指南"
   name = "Android Gradle权威指南"
   url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
-[[params.links]]
+[[params.wLinks]]
   title = "常用开发工具CDN镜像"
   name = "常用开发工具CDN镜像"
   url = "http://mirrors.flysnow.org/"
 ```
 
-`params.links`是一个数组，所以我们可以自定义很多友情链接。`name`表示显示的链接文本，`title`表示鼠标悬停在友情链接时，显示的文本。
+`params.wLinks`是一个数组，所以我们可以自定义很多友情链接。`name`表示显示的链接文本，`title`表示鼠标悬停在友情链接时，显示的文本。
 
 #### 广告模块
 

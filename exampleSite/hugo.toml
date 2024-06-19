@@ -78,12 +78,12 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   disable = false # Disables and hides the widget
 
 ### Links Widget.  Removing all entries disables the widget.
-[[params.links]]
+[[params.wLinks]]
   name = "飞雪无情的博客"
   title = "飞雪无情的博客"
   url = "https://www.flysnow.org/"
 
-[[params.links]]
+[[params.wLinks]]
   name = "Android Gradle权威指南"
   title = "Android Gradle权威指南"
   url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"

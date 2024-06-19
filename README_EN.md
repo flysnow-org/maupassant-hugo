@@ -62,11 +62,11 @@ See [exampleSite](exampleSite/) folder,  copy the`config.toml` in the root folde
 #### Friend Links
 
 ```toml
-[[params.links]]
+[[params.wLinks]]
   title = "Android Gradle权威指南"
   name = "Android Gradle权威指南"
   url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
-[[params.links]]
+[[params.wLinks]]
   title = "常用开发工具CDN镜像"
   name = "常用开发工具CDN镜像"
   url = "http://mirrors.flysnow.org/"
