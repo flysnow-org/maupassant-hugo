@@ -70,7 +70,9 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   url = "https://www.aliyun.com/acts/limit-buy?userCode=jdg9oj97"
 
 ### Categories Widget
-
+[params.wCategories]
+  disable = false # Disables and hides the widget
+  
 ### Tags Widget
 
 ### Links Widget.  Removing all entries disables the widget.
