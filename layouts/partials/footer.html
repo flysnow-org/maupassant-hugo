@@ -11,7 +11,7 @@
     {{ $defaultCdnJsSite := "cdnjs.cloudflare.com" }}
     <!-- graphviz -->
     {{- if and (or .Params.graphviz.enable (and .Site.Params.graphviz.enable (ne .Params.graphviz.enable false))) (or .IsPage .IsHome) -}}
-        <script type="text/javascript" src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/viz.js/1.7.1/viz.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"></script>
         <script type="text/javascript">
             (function () {
                 if (!window.Viz) return;
@@ -38,8 +38,8 @@
 
     <!-- flowchart -->
     {{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne .Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
-        <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/raphael/2.2.8/raphael.min.js" crossorigin="anonymous"></script>
-        <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/flowchart/1.12.2/flowchart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.8/raphael.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.12.2/flowchart.min.js" crossorigin="anonymous"></script>
         <script>
             {{- if .Params.flowchartDiagrams.options -}}
                 window.flowchartDiagramsOptions = {{ .Params.flowchartDiagrams.options | safeJS }};
@@ -68,10 +68,10 @@
     <!-- sequence必须要在flow加载之后，否则sequence渲染不成功，原因待分析 -->
     <!-- js-sequence-diagrams -->
     {{- if and (or .Params.sequenceDiagrams.enable (and .Site.Params.sequenceDiagrams.enable (ne .Params.sequenceDiagrams.enable false))) (or .IsPage .IsHome) -}}
-        <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/webfont/1.6.28/webfontloader.js" crossorigin="anonymous"></script>
-        <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" crossorigin="anonymous"></script>
-        <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/underscore.js/1.9.1/underscore-min.js" crossorigin="anonymous"></script>
-        <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js" crossorigin="anonymous"></script>
         <script>
         {{- if .Params.sequenceDiagrams.options -}}
             window.sequenceDiagramsOptions = {{ .Params.sequenceDiagrams.options | safeJS }};
@@ -112,7 +112,7 @@
     <script src='//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
     
     {{- if .Site.Params.fancybox -}}
-        <script src="//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     {{- end -}}
 {{ end }}
 
