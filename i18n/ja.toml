@@ -42,9 +42,6 @@ other = "最新の投稿"
 [related_posts]
 other = "関連記事"
 
-[busuanzi]
-other = "読みます。"
-
 [Feed_rss]
 other = "RSSフィード"
 

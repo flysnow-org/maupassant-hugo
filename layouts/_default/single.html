@@ -6,13 +6,6 @@
             <h1 class="post-title">{{ .Title }}</h1>
         </header>
         {{ partial "post-meta.html" . }}
-        {{ if .Site.Params.busuanzi }}
-        <div class="post-meta">
-            <span id="busuanzi_container_page_pv">&nbsp;|
-                <span id="busuanzi_value_page_pv"></span> <span>{{ i18n "busuanzi" }}</span>
-            </span>
-        </div>
-        {{ end }}
         {{ if .Params.toc }}
         <div class="clear" style="display: none">
             <div class="toc-article">

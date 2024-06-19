@@ -1,14 +1,10 @@
 <footer id="footer">
     <div>
         &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }} By {{ .Site.Params.author }}</a>
-        {{ if .Site.Params.beian }}
-        | <a rel="nofollow" href="http://beian.miit.gov.cn/">{{.Site.Params.beian}}</a>
-        {{ end }}
     </div>
 </footer>
 
 {{ if .IsPage }}
-    {{ $defaultCdnJsSite := "cdnjs.cloudflare.com" }}
     <!-- graphviz -->
     {{- if and (or .Params.graphviz.enable (and .Site.Params.graphviz.enable (ne .Params.graphviz.enable false))) (or .IsPage .IsHome) -}}
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"></script>
@@ -65,7 +61,7 @@
         </script>
     {{- end -}}
     
-    <!-- sequence必须要在flow加载之后，否则sequence渲染不成功，原因待分析 -->
+    <!-- The sequence must be loaded after the flow, otherwise the sequence rendering will not be successful. The reason needs to be analyzed. -->
     <!-- js-sequence-diagrams -->
     {{- if and (or .Params.sequenceDiagrams.enable (and .Site.Params.sequenceDiagrams.enable (ne .Params.sequenceDiagrams.enable false))) (or .IsPage .IsHome) -}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" crossorigin="anonymous"></script>
@@ -109,7 +105,7 @@
                 }
             };
     </script>
-    <script src='//{{ .Site.Params.cdnJsSite | default $defaultCdnJsSite }}/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
     
     {{- if .Site.Params.fancybox -}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
@@ -121,10 +117,6 @@
 {{ template "_internal/google_analytics.html" . }}
 
 {{ partial "copy_button" . }}
-
-{{ if .Site.Params.busuanzi }}
-    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
-{{ end }}
 
 <!-- custom js -->
 {{ range .Site.Params.customJS }}

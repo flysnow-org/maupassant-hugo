@@ -42,9 +42,6 @@ other = "최근 게시물"
 [related_posts]
 other = "관련 게시물"
 
-[busuanzi]
-other = "읽습니다."
-
 [Feed_rss]
 other = "RSS 피드"
 

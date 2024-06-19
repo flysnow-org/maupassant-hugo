@@ -42,9 +42,6 @@ other = "Latest posts"
 [related_posts]
 other = "Related posts"
 
-[busuanzi]
-other = "reads"
-
 [Feed_rss]
 other = "RSS"
 

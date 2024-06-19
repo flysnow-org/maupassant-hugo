@@ -41,9 +41,6 @@ other = "最新貼文"
 [related_posts]
 other = "相關文章"
 
-[busuanzi]
-other = "閱讀"
-
 [Feed_rss]
 other = "文章 RSS"
 

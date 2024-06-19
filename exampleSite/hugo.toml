@@ -31,7 +31,6 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
   keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
   description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
-  busuanzi = true # https://github.com/soxft/busuanzi website statistics analyzer
   googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
 
   # Here you can put list of custom JS/CSS files you want to be loaded
