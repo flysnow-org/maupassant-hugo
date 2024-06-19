@@ -158,21 +158,21 @@ type: "search"
 广告模块在侧边栏，可以灵活配置，让博主可以放一些超链接广告、或者图片链接广告。
 
 ```toml
-[[params.ads]]
+[[params.wAds]]
   title = "领取￥1888阿里云产品通用代金券"
   url = "https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=jdg9oj97"
 
-[[params.ads]]
+[[params.wAds]]
   title = "领取￥1888阿里云产品通用代金券"
   url = "https://promotion.aliyun.com/ntms/act/vmpt/aliyun-group/home.html?userCode=jdg9oj97"
   img = "https://img.alicdn.com/tfs/TB17qJhXpzqK1RjSZFvXXcB7VXa-200-126.jpg"
-[[params.ads]]
+[[params.wAds]]
   title = "领取￥1888阿里云产品通用代金券"
   url = "https://promotion.aliyun.com/ntms/act/enterprise-discount.html?userCode=jdg9oj97"
   img = "https://img.alicdn.com/tfs/TB1aDXhXpzqK1RjSZFvXXcB7VXa-259-194.jpg"
 ```
 
-`params.ads`是一个数组，所以我们可以自定义很多广告。如果`img`存在，则优先使用图片广告,`title`表示鼠标悬停在广告链接时，显示的文本。
+`params.wAds`是一个数组，所以我们可以自定义很多广告。如果`img`存在，则优先使用图片广告,`title`表示鼠标悬停在广告链接时，显示的文本。
 
 具体效果参考 [http://www.flysnow.org/](http://www.flysnow.org/)
 

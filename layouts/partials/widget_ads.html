@@ -1,10 +1,10 @@
-{{ with .Site.Params.ads }}
+{{ with .Site.Params.wAds }}
 <section class="widget">
-    <h3 class="widget-title" style="color:red">{{ i18n "ads" }}</h3>
+    <h3 class="widget-title ad">{{ i18n "ads" }}</h3>
     <ul class="widget-list">
         {{ range . }}
         <li>
-            <a href="{{ .url }}" title="{{ .title }}" style="color:red">
+            <a class="ad" href="{{ .url }}" title="{{ .title }}">
                 {{ if .img }}
                     <img src="{{ .img }}">
                 {{ else }}

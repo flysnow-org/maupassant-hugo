@@ -103,15 +103,15 @@ Now ,run `hugo server` and try local search.
 #### Ads
 
 ```toml
-[[params.ads]]
+[[params.wAds]]
   title = "领取￥1888阿里云产品通用代金券"
   url = "https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=jdg9oj97"
 
-[[params.ads]]
+[[params.wAds]]
   title = "领取￥1888阿里云产品通用代金券"
   url = "https://promotion.aliyun.com/ntms/act/vmpt/aliyun-group/home.html?userCode=jdg9oj97"
   img = "https://img.alicdn.com/tfs/TB17qJhXpzqK1RjSZFvXXcB7VXa-200-126.jpg"
-[[params.ads]]
+[[params.wAds]]
   title = "领取￥1888阿里云产品通用代金券"
   url = "https://promotion.aliyun.com/ntms/act/enterprise-discount.html?userCode=jdg9oj97"
   img = "https://img.alicdn.com/tfs/TB1aDXhXpzqK1RjSZFvXXcB7VXa-259-194.jpg"

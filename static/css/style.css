@@ -1116,4 +1116,7 @@ table tbody tr td:nth-of-type(1) pre {
 .github-badge .bg-lightgrey,.github-badge .bg-lightgray {
   background-color: #9f9f9f !important; 
 }
-  
+
+.ad {
+    color: red;
+}

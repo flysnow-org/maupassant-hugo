@@ -55,15 +55,16 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   type = "post" # Only show latest posts of this type. See https://gohugo.io/methods/page/type/
 
 ### Ads Widget.  Removing all entries disables the widget.
-[[params.ads]]
+# If `img` is not specified, the text in `title` will be used instead
+[[params.wAds]]
   img = "https://img.alicdn.com/tfs/TB1_rYHo7P2gK0jSZPxXXacQpXa-690-388.jpg"
   title = "【2019双12】ALL IN CLoud 低至1折"
   url = "https://www.aliyun.com/minisite/goods?userCode=jdg9oj97&share_source=copy_link"
-[[params.ads]]
+[[params.wAds]]
   img = "https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg"
   title = "助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！"
   url = "https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=14ff722692ac784fa8c3301c8c28d924&from=console"
-[[params.ads]]
+[[params.wAds]]
   img = "https://img.alicdn.com/tfs/TB1hblJl7Y2gK0jSZFgXXc5OFXa-750-400.jpg"
   title = "【渠道专享低折扣】11月特惠 限时2折"
   url = "https://www.aliyun.com/acts/limit-buy?userCode=jdg9oj97"
