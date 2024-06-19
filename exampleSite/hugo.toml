@@ -88,7 +88,9 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   title = "Android Gradle权威指南"
   url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
 
-### Meta Widget
+### Socials Widget
+[params.wSocials]
+  disable = false # Disables and hides the widget
 
 ##### Page Features ##########################################################
 
