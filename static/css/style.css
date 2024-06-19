@@ -236,6 +236,9 @@ textarea {
     padding: 1em 2em .75em 1em;
     line-height: 1.5;
 }
+#search input::placeholder {
+    color: #999;
+}
 #search button {
     position:absolute;
     top:0;
@@ -246,7 +249,7 @@ textarea {
     padding:14px 0;
     width:auto;
     height:48px;
-    color:#444;
+    color:#dddddd;
     background:none;
 }
 .col-8 {
