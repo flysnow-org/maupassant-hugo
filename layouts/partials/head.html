@@ -1,5 +1,4 @@
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,11 +41,7 @@
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    {{ if .Site.Params.googleAd }}
-    <script data-ad-client="{{ .Site.Params.googleAd }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    {{ end }}
-    
+    {{ partial "gtm/head" . }}
     {{if .Site.Params.fancybox }}
         <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" rel="stylesheet">
     {{ end }}

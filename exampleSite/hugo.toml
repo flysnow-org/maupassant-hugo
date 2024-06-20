@@ -18,10 +18,6 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 
 ##### Services ###############################################################
 
-[services]
-[services.googleAnalytics]
-  ID = '' # Google Analytics ID. See https://gohugo.io/templates/internal/#configure-google-analytics
-
 [services.disqus]
   shortname = '' # Disqus comments. See https://gohugo.io/templates/embedded/?search-input=disqusShortname#configure-disqus
 
@@ -32,7 +28,6 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
   subtitle = "Elegant & simple blog theme inspired by Guy de Maupassant"
   keywords = "maupassant, hugo, theme, free, open-source, blog, blogger, light, website, simple, minimal, responsive, SEO friendly, fast, demo, demosight, i18n, en, ja, ko, zh"
   description = "Maupassant is a free and open-source Hugo theme designed for bloggers. It features a clean, minimal aesthetic inspired by the works of Guy de Maupassant, perfect for showcasing your writing."
-  googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
 
   # Here you can put list of custom JS/CSS files you want to be loaded
   customCSS = []
@@ -40,6 +35,10 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 
   # Global table of contents switch. For non-blog posts pages, consider turning it off in `front matter`
   toc = true
+
+### Google Tag Manager (GTM)
+[params.googletagmanager]
+  id = "" # Google Tag Manager ID
 
 ##### Side Column Widgets ####################################################
 
