@@ -38,7 +38,7 @@ hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Ko
 
 ### Google Tag Manager (GTM)
 [params.googletagmanager]
-  id = "" # Google Tag Manager ID
+  gtmid = "" # Google Tag Manager ID
 
 ##### Side Column Widgets ####################################################
 

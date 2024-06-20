@@ -45,20 +45,29 @@ jobs:
       #     && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       # - name: Install Dart Sass
         # run: sudo snap install dart-sass
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
           path: themes/maupassant
+
       # Since website is under exampleSite subdirectory of the theme, we need to copy it to the root
       - name: Copy exampleSite contents
         run: cp -r themes/maupassant/exampleSite/* .
+
+      - name: Inject GTM ID into hugo.toml
+        run: |
+          sed -i 's/gtmid = ""/gtmid = "${{ secrets.GTM_ID }}"/' hugo.toml
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -70,6 +79,7 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
