@@ -107,9 +107,6 @@ pre {
 code {
     display: inline-block;
 }
-pre code {
-    text-wrap: wrap;
-}
 blockquote {
     display: block;
     margin-block-start: 1em;
