@@ -908,6 +908,21 @@ img.alignright {
     line-height: 2;
     padding-bottom: .8em; 
 }
+@media print, screen and (max-width:1290px) {
+    .post-archive {
+       margin-right: 320px;
+    }
+}
+@media print, screen and (max-width:1057px) {
+    .post-archive {
+       margin-right: 260px;
+    }
+}
+@media print, screen and (max-width:860px) {
+    .post-archive {
+       margin-right: 0px;
+    }
+}
 .post-archive h2 {
       margin: 0;
       font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif; 
