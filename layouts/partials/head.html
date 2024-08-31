@@ -37,7 +37,10 @@
         {{- end }}
     {{- end }}
     <meta property="og:url" content="{{ .Permalink }}">
-    <link rel="shortcut icon" href='{{ "favicon.ico" | relURL }}'  type="image/x-icon">
+    <link rel="shortcut icon" href='{{ "favicon.ico" | relURL }}' type="image/x-icon">
+    <link rel="icon" href='{{ "favicon.png" | relURL }}' type="image/png">
+    <link rel="alternate icon" href='{{ "favicon.png" | relURL }}' type="image/svg+xml">
+    
 
     <link rel="stylesheet" href='{{ "css/normalize.css" | relURL}}'>
     <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
